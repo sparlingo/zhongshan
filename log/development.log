@@ -4304,3 +4304,32 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 463ms (Views: 461.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for 127.0.0.1 at 2017-08-14 12:40:08 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (263.0ms)
+Completed 200 OK in 2242ms (Views: 2168.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-14 12:40:39 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered albums/index.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 330ms (Views: 247.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums/3" for 127.0.0.1 at 2017-08-14 12:41:34 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/application
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 3]]
+  Rendered albums/show.html.erb within layouts/application (163.0ms)
+Completed 200 OK in 391ms (Views: 336.2ms | ActiveRecord: 0.5ms)
+
+
