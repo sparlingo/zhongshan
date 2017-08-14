@@ -3,3 +3,12 @@
 <h1><%= @album_item.title %></h1>
 
 <em><%= @album_item.subtitle %></em>
+
+<h2>Tags</h2>
+<% @album_item.tags.each do |t| %>
+    <p>{{ t.name }}</p>
+<% end %>
+
+<hr>
+
+<%= params[:action] %>

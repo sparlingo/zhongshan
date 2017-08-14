@@ -1,14 +1,17 @@
 class AlbumsController < ApplicationController
     def index
-        @album_items = Album.angular
+        @album_items = Album.all
     end
 
     def new
         @album_item = Album.new
+        3.times { @album_item.tags.build }
     end
 
     def create
-        @album_item = Album.new(params.require(:album).permit(:title, :subtitle, :main_image))
+        @album_item = Album.new(params.require(:album).permit(:title, :subtitle, :main_image, 
+            tags_attributes: [:name]
+        ))
 
         respond_to do |format|
             if @album_item.save

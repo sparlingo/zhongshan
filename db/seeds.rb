@@ -5,12 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+3.times do |tag|
+    Tag.create!(
+        name: "KB#{tag}"
+    )
+end
+puts "3 tags created"
+
 3.times do |topic|
     Topic.create!(
         title: "KB#{topic}"
     )
 end
-
 puts "3 topics created"
 
 10.times do |blog|
@@ -25,7 +31,6 @@ puts "3 topics created"
         topic_id: Topic.last.id
     )
 end
-
 puts "10 blog posts created"
 
 5.times do |album|
@@ -35,13 +40,4 @@ puts "10 blog posts created"
         main_image: "http://placehold.it/240x160"
     )
 end
-
 puts "5 albums created"
-
-1.times do |album|
-    Album.create!(
-        title: "This album is #{album}",
-        subtitle: "Angular",
-        main_image: "http://placehold.it/240x160"
-    )
-end
