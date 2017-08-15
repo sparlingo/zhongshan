@@ -1,3 +1,4 @@
 development.log
 server.pid
 node_modules/
+*.sqlite3

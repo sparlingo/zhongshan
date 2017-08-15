@@ -9,9 +9,7 @@ class AlbumsController < ApplicationController
     end
 
     def create
-        @album_item = Album.new(params.require(:album).permit(:title, :subtitle, :main_image, 
-            tags_attributes: [:name]
-        ))
+        @album_item = Album.new(portfolio_params)
 
         respond_to do |format|
             if @album_item.save
@@ -30,7 +28,7 @@ class AlbumsController < ApplicationController
         @album_item = Album.find(params[:id])
 
         respond_to do |format|
-            if @album_item.update(params.require(:album).permit(:title, :subtitle, :main_image))
+            if @album_item.update(portfolio_params)
                 format.html { redirect_to albums_path, notice: 'The album is updated ' }
             else
                 format.html { render :edit }
@@ -50,4 +48,10 @@ class AlbumsController < ApplicationController
             format.html { redirect_to albums_url, notice: "Album was removed" }
         end
     end
+
+    private
+        def portfolio_params
+            params.require(:album).permit(:title, :subtitle, :main_image, 
+                                        tags_attributes: [:name])
+        end
 end

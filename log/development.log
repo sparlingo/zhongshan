@@ -4333,3 +4333,880 @@ Processing by AlbumsController#show as HTML
 Completed 200 OK in 391ms (Views: 336.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/albums/" for 127.0.0.1 at 2017-08-14 13:10:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (D:/development/zhongshan/app/controllers/albums_controller.rb:58: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/albums_controller.rb:58: syntax error, unexpected keyword_end, expecting end-of-input
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (44.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1662.5ms)
+Started GET "/albums/" for 127.0.0.1 at 2017-08-14 13:11:25 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered albums/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 882ms (Views: 835.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2017-08-14 13:11:57 -0700
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/application
+  Rendered albums/new.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 365ms (Views: 247.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2017-08-14 13:12:08 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aiv4jFcKBiZePajpxTbbRLgtPfn7NY43WhJL5jVfFKN08OFGFZkCLONwpHIaxsRfBfc2RIa+LQfog5vqsYDv/w==", "album"=>{"title"=>"ljsler", "subtitle"=>"ouweonljsf", "main_image"=>"http://placehold.it/480x320", "tags_attributes"=>{"0"=>{"name"=>"blah"}, "1"=>{"name"=>"blah2"}, "2"=>{"name"=>"blah1"}}}, "commit"=>"Create Album"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "main_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "ljsler"], ["subtitle", "ouweonljsf"], ["main_image", "http://placehold.it/480x320"], ["created_at", "2017-08-14 20:12:08.776911"], ["updated_at", "2017-08-14 20:12:08.776911"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "blah"], ["album_id", 7], ["created_at", "2017-08-14 20:12:08.799912"], ["updated_at", "2017-08-14 20:12:08.799912"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "blah2"], ["album_id", 7], ["created_at", "2017-08-14 20:12:08.812413"], ["updated_at", "2017-08-14 20:12:08.812413"]]
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "album_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "blah1"], ["album_id", 7], ["created_at", "2017-08-14 20:12:08.821912"], ["updated_at", "2017-08-14 20:12:08.821912"]]
+  [1m[35m (34.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/albums
+Completed 302 Found in 144ms (ActiveRecord: 47.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-14 13:12:08 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/application
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered albums/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 230ms (Views: 219.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/7" for 127.0.0.1 at 2017-08-14 13:12:13 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 7]]
+  Rendered albums/show.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 337ms (Views: 309.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:29:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered pages/home.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 886ms (Views: 753.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-14 14:29:39 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (89.5ms)
+Completed 200 OK in 362ms (Views: 303.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:32:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+  
+ActionController::RoutingError (uninitialized constant ApplicationController::CurrenUserConcern):
+  
+app/controllers/application_controller.rb:5:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/pages_controller.rb:1:in `<top (required)>'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (21.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (24.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (18.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2005.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:32:26 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (D:/development/zhongshan/app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+    attr_accessor : :name, :first_name, :last_nam
+                   ^):
+  
+app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/concerns/current_user_concern.rb:9:in `guest_user'
+app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__822856905_50996880'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1392.0ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:33:07 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (D:/development/zhongshan/app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+    attr_accessor: :name, :first_name, :last_nam
+                  ^):
+  
+app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/concerns/current_user_concern.rb:9:in `guest_user'
+app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__822856905_50671520'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1357.0ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:33:31 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (D:/development/zhongshan/app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+    attr_accessor : :name, :first_name, :last_nam
+                   ^):
+  
+app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/concerns/current_user_concern.rb:9:in `guest_user'
+app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__822856905_37931440'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1330.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:34:38 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (D:/development/zhongshan/app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+    attr_accessor: :name, :first_name, :last_nam
+                  ^):
+  
+app/models/guest_user.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/concerns/current_user_concern.rb:9:in `guest_user'
+app/controllers/concerns/current_user_concern.rb:5:in `current_user'
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__822856905_66995960'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1453.0ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:40:41 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (53.5ms)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for "guest@example.com":String):
+    1: <h1>Hi <%= current_user.first_name if current_user %></h1>
+    2: <h1>Pages#home</h1>
+    3: <p>Find me in app/views/pages/home.html.erb</p>
+    4: 
+  
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__822856905_43516180'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1504.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:49:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (59.5ms)
+Completed 500 Internal Server Error in 209ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for "guest@example.com":String):
+    1: <h1>Hi <%= current_user.first_name if current_user %></h1>
+    2: <h1>Pages#home</h1>
+    3: <p>Find me in app/views/pages/home.html.erb</p>
+    4: 
+  
+app/views/pages/home.html.erb:1:in `_app_views_pages_home_html_erb__966712151_61709460'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.4ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1388.0ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 14:51:30 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered pages/home.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 914ms (Views: 894.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-08-14 14:51:54 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (83.5ms)
+Completed 200 OK in 358ms (Views: 347.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for 127.0.0.1 at 2017-08-14 14:52:19 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jNcqdnCXzzBANBfQGsH0cgKQn+qKPttyTcT9OHE/0LiSDDO8MgTLOv15G0vFMetpv0qUV/e1eEL/VS009eAr5A==", "user"=>{"email"=>"joo@com", "name"=>"Winnie Pooh", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt_ext):
+  
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `require'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `block in require'
+activesupport (5.0.5) lib/active_support/dependencies.rb:259:in `load_dependency'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `require'
+bcrypt-3.1.11-x64 (mingw32) lib/bcrypt.rb:16:in `rescue in <top (required)>'
+bcrypt-3.1.11-x64 (mingw32) lib/bcrypt.rb:12:in `<top (required)>'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `require'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `block in require'
+activesupport (5.0.5) lib/active_support/dependencies.rb:259:in `load_dependency'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `require'
+devise (4.2.1) lib/devise/encryptor.rb:1:in `<top (required)>'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `require'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `block in require'
+activesupport (5.0.5) lib/active_support/dependencies.rb:259:in `load_dependency'
+activesupport (5.0.5) lib/active_support/dependencies.rb:293:in `require'
+devise (4.2.1) lib/devise/models/database_authenticatable.rb:158:in `password_digest'
+devise (4.2.1) lib/devise/models/database_authenticatable.rb:45:in `password='
+activemodel (5.0.5) lib/active_model/attribute_assignment.rb:46:in `public_send'
+activemodel (5.0.5) lib/active_model/attribute_assignment.rb:46:in `_assign_attribute'
+activemodel (5.0.5) lib/active_model/attribute_assignment.rb:40:in `block in _assign_attributes'
+activemodel (5.0.5) lib/active_model/attribute_assignment.rb:39:in `each'
+activemodel (5.0.5) lib/active_model/attribute_assignment.rb:39:in `_assign_attributes'
+activerecord (5.0.5) lib/active_record/attribute_assignment.rb:26:in `_assign_attributes'
+activemodel (5.0.5) lib/active_model/attribute_assignment.rb:33:in `assign_attributes'
+activerecord (5.0.5) lib/active_record/core.rb:319:in `initialize'
+activerecord (5.0.5) lib/active_record/inheritance.rb:65:in `new'
+activerecord (5.0.5) lib/active_record/inheritance.rb:65:in `new'
+devise (4.2.1) lib/devise/models/registerable.rb:20:in `new_with_session'
+devise (4.2.1) app/controllers/devise/registrations_controller.rb:101:in `build_resource'
+devise (4.2.1) app/controllers/devise/registrations_controller.rb:15:in `create'
+actionpack (5.0.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1283.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-14 15:09:37 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered pages/home.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 853ms (Views: 726.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-08-14 15:10:32 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 318ms (Views: 277.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/" for 127.0.0.1 at 2017-08-14 15:10:44 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u9lsfOS0hckg6oluQ/MCTb2GfdQzjkABqksfXejYgOSlAnW2pieBw52nhfWcAx1WAFx2aU4F4zEY2s9RbAd7uA==", "user"=>{"email"=>"this@guy.com", "name"=>"This Guy", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "this@guy.com"], ["LIMIT", 1]]
+  [1m[35mSQL (15.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "this@guy.com"], ["name", "This Guy"], ["encrypted_password", "$2a$11$FdDNp/U0nVzzuUobFLJZ8ui3KfuEA6InYNn8C/o/Kvc4OSkxTTpoe"], ["created_at", "2017-08-14 22:10:44.720959"], ["updated_at", "2017-08-14 22:10:44.720959"], ["roles", "user"]]
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-08-14 22:10:44.774957"], ["last_sign_in_at", "2017-08-14 22:10:44.774957"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-08-14 22:10:44.776458"], ["id", 1]]
+  [1m[35m (19.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 540ms (ActiveRecord: 55.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 15:10:44 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 237ms (Views: 210.4ms | ActiveRecord: 3.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-08-14 15:10:52 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2bFjJsnd0JrTdz9BTPsGEGVwc5XcO7WdayxAWAEFnUXHanrsi07UkG46M9qTCxkL2Kp4KKGwFq3ZvZBUhdpmGQ=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 71ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 15:10:52 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered pages/home.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 325ms (Views: 309.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 15:23:25 -0700
+  
+ActionController::RoutingError (undefined local variable or method `all' for BlogsController:Class
+Did you mean?  call):
+  
+app/controllers/blogs_controller.rb:3:in `<class:BlogsController>'
+app/controllers/blogs_controller.rb:1:in `<top (required)>'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (18.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2109.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 15:24:14 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (65.5ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_roles?' for "guest@example.com":String):
+    18:         <td><%= blog.body %></td>
+    19:         <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+    20:         <td><%= link_to 'Show', blog %></td>
+    21:         <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></td>
+    22:         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    23:       </tr>
+    24:     <% end %>
+  
+app/views/blogs/index.html.erb:21:in `block in _app_views_blogs_index_html_erb___132856166_97019360'
+app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb___132856166_97019360'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1333.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 15:35:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+  
+ActionController::RoutingError (undefined local variable or method `all' for BlogsController:Class
+Did you mean?  call):
+  
+app/controllers/blogs_controller.rb:4:in `<class:BlogsController>'
+app/controllers/blogs_controller.rb:1:in `<top (required)>'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (20.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2115.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  [1m[33mUPDATE "users" SET "roles" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["roles", "site_admin"], ["updated_at", "2017-08-14 22:40:35.353275"], ["id", 1]]
+  [1m[35m (18.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 16:48:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+  
+ActionController::RoutingError (undefined local variable or method `all' for BlogsController:Class
+Did you mean?  call):
+  
+app/controllers/blogs_controller.rb:4:in `<class:BlogsController>'
+app/controllers/blogs_controller.rb:1:in `<top (required)>'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.5ms)
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (20.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (19.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1914.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 16:49:08 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+Completed 500 Internal Server Error in 479ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::MissingTemplate (Missing template layouts/blog with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/development/zhongshan/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/devise-4.2.1/app/views"
+):
+  
+actionview (5.0.5) lib/action_view/path_set.rb:46:in `find'
+actionview (5.0.5) lib/action_view/lookup_context.rb:122:in `find'
+actionview (5.0.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+actionview (5.0.5) lib/action_view/renderer/template_renderer.rb:89:in `resolve_layout'
+actionview (5.0.5) lib/action_view/renderer/template_renderer.rb:96:in `resolve_layout'
+actionview (5.0.5) lib/action_view/renderer/template_renderer.rb:76:in `find_layout'
+actionview (5.0.5) lib/action_view/renderer/template_renderer.rb:60:in `render_with_layout'
+actionview (5.0.5) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+actionview (5.0.5) lib/action_view/renderer/template_renderer.rb:14:in `render'
+actionview (5.0.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+actionview (5.0.5) lib/action_view/renderer/renderer.rb:23:in `render'
+actionview (5.0.5) lib/action_view/rendering.rb:104:in `_render_template'
+actionpack (5.0.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+actionview (5.0.5) lib/action_view/rendering.rb:83:in `render_to_body'
+actionpack (5.0.5) lib/action_controller/metal/rendering.rb:52:in `render_to_body'
+actionpack (5.0.5) lib/action_controller/metal/renderers.rb:142:in `render_to_body'
+actionpack (5.0.5) lib/abstract_controller/rendering.rb:26:in `render'
+actionpack (5.0.5) lib/action_controller/metal/rendering.rb:36:in `render'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+activesupport (5.0.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+C:/tools/ruby24/lib/ruby/2.4.0/benchmark.rb:308:in `realtime'
+activesupport (5.0.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+actionpack (5.0.5) lib/action_controller/metal/implicit_render.rb:36:in `default_render'
+actionpack (5.0.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1581.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 16:49:32 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (80.5ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_roles?' for "guest@example.com":String):
+    18:         <td><%= blog.body %></td>
+    19:         <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+    20:         <td><%= link_to 'Show', blog %></td>
+    21:         <td><%= link_to 'Edit', edit_blog_path(blog) if logged_in?(:site_admin) %></td>
+    22:         <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    23:       </tr>
+    24:     <% end %>
+  
+app/views/blogs/index.html.erb:21:in `block in _app_views_blogs_index_html_erb__768337975_79467060'
+app/views/blogs/index.html.erb:15:in `_app_views_blogs_index_html_erb__768337975_79467060'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1700.5ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 16:50:13 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (26.0ms)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `has_roles?' for "guest@example.com":String):
+    27: 
+    28: <br>
+    29: 
+    30: <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+  
+app/views/blogs/index.html.erb:30:in `_app_views_blogs_index_html_erb__768337975_49746320'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1333.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 16:50:31 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 774ms (Views: 755.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 16:59:43 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 1000ms (Views: 924.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 17:02:16 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 393ms (Views: 357.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2017-08-14 17:02:21 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 300ms (Views: 270.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 17:02:24 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 307ms (Views: 290.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-14 17:06:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 869ms (Views: 774.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-08-14 17:06:23 -0700
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 275ms (Views: 255.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-14 17:06:25 -0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 278ms (Views: 257.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-14 17:06:26 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered pages/home.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 299ms (Views: 260.1ms | ActiveRecord: 2.0ms)
+
+
