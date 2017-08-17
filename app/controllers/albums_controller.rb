@@ -1,6 +1,9 @@
 class AlbumsController < ApplicationController
+    layout "albums"
+
     def index
-        @album_items = Album.all
+        @albums = Album.all
+        @page_title = "Photo Albums"
     end
 
     def new

@@ -1,19 +1,21 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  #layout "blog"
+  layout "blog"
   #access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: all
 
   # GET /blogs
   # GET /blogs.json
   def index
     @blogs = Blog.all
-    @page_title = "ZWIE Blog"
+    @page_title = "Blog"
     @seo_keywords = "ESL, kindergarten, education"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @blog_item = Blog.find(params[:id])
+    @page_title = "Blog"
   end
 
   # GET /blogs/new
@@ -23,6 +25,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+    @blog_item = Album.find(params[:id])
   end
 
   # POST /blogs
