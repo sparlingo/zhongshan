@@ -10,19 +10,20 @@
   </head>
 
   <body>
-    <div class="container">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
 
-      <% login_helper %>
+          <%= yield %>
 
-      <%= yield %>
+          <%= render "shared/application_nav", location: 'bottom' %>
 
-      <%= render "shared/nav", location: 'bottom' %>
+          <%= render "shared/footer", location: 'bottom' %>
 
-      <% if session[:source] %>
-        Thanks for vising me from <%= session[:source] %>
-      <% end %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

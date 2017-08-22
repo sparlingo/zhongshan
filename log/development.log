@@ -7606,3 +7606,524 @@ app/controllers/blogs_controller.rb:17:in `show'
   Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
   Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1280.0ms)
+Started GET "/" for 127.0.0.1 at 2017-08-20 22:25:26 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (7.0ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 11026ms (Views: 10876.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:45:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (6.5ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 1948ms (Views: 1804.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:48:44 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 241ms (Views: 234.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:49:56 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  Rendered shared/_nav.html.erb (1.5ms)
+Completed 200 OK in 237ms (Views: 230.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:51:51 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mAlbum Load (1.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered shared/_application_nav.html.erb (634.5ms)
+Completed 500 Internal Server Error in 978ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x000000079befe0>:0x0000000b4429a0>
+Did you mean?  about_us_path):
+    4:     <nav class="nav nav-masthead">
+    5:       <%= link_to "Home", root_path %>
+    6:       <%= link_to "Contact Us", contact_path %>
+    7:       <%= link_to "About Us", about_path %>
+    8:       <%= link_to "Photos", albums_path %>
+    9:     </nav>
+   10:   </div>
+  
+app/views/shared/_application_nav.html.erb:7:in `_app_views_shared__application_nav_html_erb___1927666627_70211500'
+app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1420490284_94491060'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (918.0ms)
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:52:13 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+Completed 200 OK in 211ms (Views: 203.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-08-22 13:52:19 -0700
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+Completed 200 OK in 188ms (Views: 178.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-08-22 13:52:21 -0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (24.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 194ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 13:52:23 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (2.5ms)
+  Rendered albums/index.html.erb within layouts/albums (51.5ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 200 OK in 304ms (Views: 288.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 13:52:24 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.5ms)
+  Rendered albums/index.html.erb within layouts/albums (11.5ms)
+  Rendered shared/_nav.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 90.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:52:26 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+Completed 200 OK in 162ms (Views: 157.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:52:26 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+Completed 200 OK in 145ms (Views: 135.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:52:29 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 182ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:53:35 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (6.0ms)
+Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"blogs"} missing required keys: [:id]):
+     5:       <%= link_to "Home", root_path %>
+     6:       <%= link_to "Contact Us", contact_path, class: 'nav-link' %>
+     7:       <%= link_to "About Us", about_us_path, class: 'nav-link' %>
+     8:       <%= link_to "Blog", blog_path, class: 'nav-link' %>
+     9:       <%= link_to "Photos", albums_path, class: 'nav-link' %>
+    10:     </nav>
+    11:   </div>
+  
+app/views/shared/_application_nav.html.erb:8:in `_app_views_shared__application_nav_html_erb___1927666627_97498540'
+app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__1420490284_121969840'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (752.1ms)
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:54:05 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 144ms (Views: 135.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 13:54:18 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (0.0ms)
+Completed 200 OK in 187ms (Views: 171.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:07:39 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 294ms (Views: 282.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:09:23 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 258ms (Views: 250.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:09:45 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+Completed 200 OK in 151ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:09:47 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+Completed 200 OK in 152ms (Views: 145.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:10:07 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 210ms (Views: 196.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:14:02 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (16.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 185ms (Views: 169.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:14:07 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 146.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:14:24 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 199ms (Views: 186.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:15:14 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 210ms (Views: 198.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-08-22 14:15:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (14.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (37.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1365.0ms)
+Started GET "/logout" for 127.0.0.1 at 2017-08-22 14:16:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [35 times] (10.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1250.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:16:27 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 204ms (Views: 198.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:18:23 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:18:25 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Started GET "/contact" for 127.0.0.1 at 2017-08-22 14:18:29 -0700
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (11.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 11989ms (Views: 11981.0ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 10764ms (Views: 10755.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 9346ms (Views: 9320.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 14:18:39 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (7.1ms)
+  Rendered albums/index.html.erb within layouts/albums (30.5ms)
+  Rendered shared/_nav.html.erb (1.0ms)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    16: 
+    17:       <%= render "shared/nav", location: 'top' %>
+    18: 
+    19:       <% login_helper %>
+    20: 
+    21:       <%= yield %>
+    22: 
+  
+app/helpers/application_helper.rb:2:in `login_helper'
+app/views/layouts/albums.html.erb:19:in `_app_views_layouts_albums_html_erb__1986513456_109518320'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1122.5ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 14:20:08 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (3.0ms)
+  Rendered albums/index.html.erb within layouts/albums (19.0ms)
+  Rendered shared/_application_nav.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 164ms (Views: 156.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 14:21:21 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (3.0ms)
+  Rendered albums/index.html.erb within layouts/albums (27.0ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 206ms (Views: 195.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 14:21:26 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (20.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 116.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:21:35 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 171ms (Views: 164.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:21:35 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-08-22 14:21:38 -0700
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (1.5ms)
+Completed 200 OK in 241ms (Views: 229.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 14:21:41 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (2.0ms)
+  Rendered albums/index.html.erb within layouts/albums (16.5ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 154ms (Views: 148.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-22 14:21:41 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.5ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 109ms (Views: 103.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-08-22 14:21:44 -0700
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 168ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-08-22 14:21:44 -0700
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 158ms (Views: 153.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:21:46 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 215ms (Views: 208.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 14:23:23 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 168ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
