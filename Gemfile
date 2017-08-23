@@ -54,9 +54,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '4.2.1'
 gem 'petergate', '~> 1.7'
 
-# bootstrap for front-end
-gem 'bootstrap', '~> 4.0.0.alpha6'
+# front-end gems
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 # friendlyID
 gem 'friendly_id', '~> 5.1'
+
+# Pagination
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+
 

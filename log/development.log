@@ -10481,3 +10481,1034 @@ Processing by BlogsController#new as HTML
 Completed 200 OK in 97ms (Views: 85.0ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:32:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (17.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (35.0ms)
+  Rendered shared/_blog_nav.html.erb (2.5ms)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_blog_sidebar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/development/zhongshan/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/devise-4.2.1/app/views"
+):
+    27:         
+    28:         <%= yield %>
+    29: 
+    30:         <%= render 'shared/blog_sidebar' %>
+    31:       </div>
+    32: 
+    33:         <footer class="blog-footer">
+  
+app/views/layouts/blog.html.erb:30:in `_app_views_layouts_blog_html_erb__1977840849_79463500'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (543.3ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:32:44 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_blog_sidebar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/development/zhongshan/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/devise-4.2.1/app/views"
+):
+    27:         
+    28:         <%= yield %>
+    29: 
+    30:         <%= render 'shared/blog_sidebar' %>
+    31:       </div>
+    32: 
+    33:         <footer class="blog-footer">
+  
+app/views/layouts/blog.html.erb:30:in `_app_views_layouts_blog_html_erb__1977840849_38686700'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (512.5ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:33:31 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (11.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 105ms (Views: 94.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2017-08-23 14:36:09 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (0.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2017-08-23 14:39:29 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (7.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <div class="col-sm-8 blog-main">
+    2:   <%= render @blogs %>
+    3: 
+    4:   <nav class="blog-pagination">
+    5:     <a class="btn btn-outline-primary">Older</a>
+  
+app/views/blogs/show.html.erb:2:in `_app_views_blogs_show_html_erb__1901374554_89708720'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (521.0ms)
+Started GET "/blogs/my-blog-post-9" for 127.0.0.1 at 2017-08-23 14:41:29 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-9"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-9"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (0.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 74.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:41:31 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2017-08-23 14:41:33 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/blog
+  Rendered blogs/show.html.erb within layouts/blog (1.0ms)
+  Rendered shared/_blog_nav.html.erb (1.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 87ms (Views: 74.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:42:35 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 128ms (Views: 116.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/my-blog-post-0/toggle_status" for 127.0.0.1 at 2017-08-23 14:42:37 -0700
+Processing by BlogsController#toggle_status as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.5ms)[0m  [1m[33mUPDATE "blogs" SET "status" = ?, "updated_at" = ? WHERE "blogs"."id" = ?[0m  [["status", 1], ["updated_at", "2017-08-23 21:42:37.831332"], ["id", 1]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/blogs
+Completed 302 Found in 36ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:42:37 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 96ms (Views: 87.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/my-blog-post-2/edit" for 127.0.0.1 at 2017-08-23 14:42:40 -0700
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"my-blog-post-2"}
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-2"], ["LIMIT", 1]]
+  Rendering blogs/edit.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (17.5ms)
+  Rendered blogs/edit.html.erb within layouts/blog (22.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 106ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:46:17 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.0ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 96ms (Views: 87.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 14:46:20 -0700
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (1.5ms)
+  Rendered blogs/new.html.erb within layouts/blog (6.9ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 88ms (Views: 78.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 14:47:38 -0700
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (0.5ms)
+  Rendered blogs/new.html.erb within layouts/blog (6.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (D:/development/zhongshan/app/views/blogs/_form.html.erb:25: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: 'btn btn-primary' );@output_b
+                              ^):
+  
+app/views/blogs/_form.html.erb:25: syntax error, unexpected tLABEL, expecting '='
+app/views/blogs/new.html.erb:5:in `_app_views_blogs_new_html_erb___1239445131_105696940'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (562.5ms)
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 14:48:51 -0700
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (0.5ms)
+  Rendered blogs/new.html.erb within layouts/blog (5.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (D:/development/zhongshan/app/views/blogs/_form.html.erb:25: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: 'btn' );@output_buffer.safe_a
+                              ^):
+  
+app/views/blogs/_form.html.erb:25: syntax error, unexpected tLABEL, expecting '='
+app/views/blogs/new.html.erb:5:in `_app_views_blogs_new_html_erb___1239445131_92532060'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (572.7ms)
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 14:49:26 -0700
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (1.5ms)
+  Rendered blogs/new.html.erb within layouts/blog (7.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 14:50:20 -0700
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (1.0ms)
+  Rendered blogs/new.html.erb within layouts/blog (9.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+Completed 200 OK in 103ms (Views: 91.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 14:53:36 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (1.5ms)
+  Rendered blogs/new.html.erb within layouts/application (7.0ms)
+  Rendered shared/_application_nav.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 164ms (Views: 129.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:53:48 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.5ms)
+  Rendered blogs/index.html.erb within layouts/application (12.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 140ms (Views: 131.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:54:02 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (28.5ms)
+  Rendered shared/_blog_nav.html.erb (2.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 132ms (Views: 104.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:55:26 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (16.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 96.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:55:58 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 108ms (Views: 99.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 14:58:12 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (9.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 134ms (Views: 119.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:58:15 -0700
+Processing by BlogsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-23 14:58:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 140ms (Views: 137.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-08-23 14:58:22 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Da89TWNbdOwgx7D6p9z5JoSHlMfTKcH4/U8h3Ozoit1USmI7VYA15OS8mh5juyDmyZSb4R/88pKIXUjCxR0JdQ==", "user"=>{"email"=>"who@who.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "who@who.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-08-23 21:58:22.730255"], ["sign_in_count", 2], ["updated_at", "2017-08-23 21:58:22.732255"], ["id", 2]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/blogs
+Completed 302 Found in 206ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:58:22 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 89ms (Views: 82.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 14:59:51 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (15.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (24.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+Completed 200 OK in 1968ms (Views: 1954.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:07:40 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (23.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 232ms (Views: 210.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:13:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (25.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (46.0ms)
+  Rendered shared/_blog_nav.html.erb (2.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 8981ms (Views: 8918.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:13:28 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.4ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 136ms (Views: 126.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:14:19 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 4290ms (Views: 4280.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 15:14:36 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (19.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (3.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 115.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 15:14:36 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (2.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 98ms (Views: 90.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:14:39 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 116.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:14:40 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.1ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 135ms (Views: 126.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 15:14:41 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 150.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 15:14:41 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (3.9ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 118ms (Views: 113.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:14:44 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 141ms (Views: 133.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:14:44 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (10.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 117.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 15:14:46 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 15:14:46 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 123ms (Views: 117.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 15:15:30 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 122ms (Views: 116.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:15:32 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 125ms (Views: 116.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 15:15:33 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (10.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 128ms (Views: 118.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:11:28 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (19.5ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 152ms (Views: 142.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:11:43 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.0ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:12:07 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 142ms (Views: 134.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2017-08-23 16:12:13 -0700
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  Rendered blogs/_form.html.erb (18.5ms)
+  Rendered blogs/new.html.erb within layouts/blog (24.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 150ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:13:28 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (6.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (14.0ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 135ms (Views: 128.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:13:38 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (10.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (22.0ms)
+  Rendered shared/_blog_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 193ms (Views: 183.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:14:12 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (5.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.5ms)
+  Rendered shared/_blog_nav.html.erb (5.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 157ms (Views: 146.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:15:36 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (11.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 123.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:17:07 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (7.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (15.5ms)
+  Rendered shared/_blog_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (247.1ms)
+Completed 500 Internal Server Error in 4311ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `copyright' for #<#<Class:0x00000004b509b0>:0x0000000e9e6318>
+Did you mean?  @copyright):
+    1: <footer class="blog-footer">
+    2:     <p>
+    3:         <%= copyright %>
+    4:     </p>
+    5:     <p><a href="#">Back to top</a></p>
+    6: </footer>
+  
+app/views/shared/_blog_footer.html.erb:3:in `_app_views_shared__blog_footer_html_erb___807411833_119004680'
+app/views/layouts/blog.html.erb:30:in `_app_views_layouts_blog_html_erb___60724840_122617120'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (659.4ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:18:06 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (3.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.0ms)
+  Rendered shared/_blog_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 118ms (Views: 110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:18:11 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered collection of blogs/_blog.html.erb [10 times] (4.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (12.3ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 142ms (Views: 133.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:21:45 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [5 times] (21.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (41.0ms)
+  Rendered shared/_blog_nav.html.erb (2.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 584ms (Views: 541.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:21:55 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [5 times] (2.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (9.0ms)
+  Rendered shared/_blog_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 127ms (Views: 116.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:21:58 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [5 times] (2.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (10.9ms)
+  Rendered shared/_blog_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (1.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 132ms (Views: 124.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:22:06 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [5 times] (4.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (13.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 142ms (Views: 134.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:22:23 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [3 times] (3.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (17.5ms)
+  Rendered shared/_blog_nav.html.erb (2.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 164ms (Views: 135.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:22:27 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [3 times] (1.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (10.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 138ms (Views: 128.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:23:23 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [3 times] (1.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (137.1ms)
+  Rendered shared/_blog_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 250ms (Views: 241.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs?page=2" for 127.0.0.1 at 2017-08-23 16:23:26 -0700
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 3], ["OFFSET", 3]]
+  Rendered collection of blogs/_blog.html.erb [3 times] (1.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (151.9ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 265ms (Views: 255.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs?page=2" for 127.0.0.1 at 2017-08-23 16:25:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 4]]
+  Rendered collection of blogs/_blog.html.erb [4 times] (22.0ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (56.0ms)
+  Rendered shared/_blog_nav.html.erb (2.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 466ms (Views: 421.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:25:32 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [4 times] (2.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (27.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 151ms (Views: 141.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs?page=2" for 127.0.0.1 at 2017-08-23 16:26:04 -0700
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 4]]
+  Rendered collection of blogs/_blog.html.erb [4 times] (2.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (28.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 156ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs?page=3" for 127.0.0.1 at 2017-08-23 16:26:07 -0700
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 8]]
+  Rendered collection of blogs/_blog.html.erb [2 times] (1.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (25.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 149ms (Views: 140.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs?page=2" for 127.0.0.1 at 2017-08-23 16:26:10 -0700
+Processing by BlogsController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 4]]
+  Rendered collection of blogs/_blog.html.erb [4 times] (3.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (28.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 159ms (Views: 149.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 16:26:12 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [4 times] (3.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (28.5ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 159ms (Views: 150.2ms | ActiveRecord: 0.5ms)
+
+
