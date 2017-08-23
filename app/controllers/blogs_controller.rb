@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :authenticate_user!
   layout "blog"
   #access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: all
 
@@ -14,7 +15,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog_item = Blog.find(params[:id])
+    @blog_item = Blog.friendly.find(params[:id])
     @page_title = "Blog"
   end
 
@@ -25,7 +26,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
-    @blog_item = Album.find(params[:id])
+    @blog_item = Blog.friendly.find(params[:id])
   end
 
   # POST /blogs
