@@ -12153,3 +12153,646 @@ Processing by AlbumsController#index as HTML
 Completed 200 OK in 197ms (Views: 183.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:59:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (5.0ms)
+  Rendered albums/index.html.erb within layouts/albums (19.5ms)
+  Rendered shared/_album_nav.html.erb (18.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.0ms)
+Completed 200 OK in 453ms (Views: 423.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/albums/1" for 127.0.0.1 at 2017-08-23 19:00:01 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/albums
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 1]]
+  Rendered albums/show.html.erb within layouts/albums (29.5ms)
+  Rendered shared/_album_nav.html.erb (1.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 151ms (Views: 137.9ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWechatSessions (20170824022601)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateWechatSessions < ActiveRecord::Migration[4.2] (called from load at C:/tools/ruby24/bin/rake:22)
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170824022601"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wechat_sessions_on_openid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wechat_sessions_on_openid' AND type='index'
+[0m
+Started GET "/wechat" for 127.0.0.1 at 2017-08-23 19:27:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by WechatsController#show as HTML
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+wechat (0.8.11) lib/wechat/responder.rb:287:in `request_encrypt_content'
+wechat (0.8.11) lib/wechat/responder.rb:213:in `verify_signature'
+activesupport (5.0.5) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.5) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.5) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.5) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.5) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (547.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPositionToAlbums (20170824023111)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (11.5ms)[0m  [1m[35mALTER TABLE "albums" ADD "position" integer[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170824023111"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_topic_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_on_album_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_on_album_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_wechat_sessions_on_openid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_wechat_sessions_on_openid' AND type='index'
+[0m
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:33:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (6.5ms)
+  Rendered albums/index.html.erb within layouts/albums (31.5ms)
+  Rendered shared/_album_nav.html.erb (23.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 16373ms (Views: 16337.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:33:58 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (8.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 178ms (Views: 172.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:35:49 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (14.5ms)
+  Rendered shared/_album_nav.html.erb (17.5ms)
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 195ms (Views: 178.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wechat" for 127.0.0.1 at 2017-08-23 19:39:06 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by WechatsController#show as HTML
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+wechat (0.8.11) lib/wechat/responder.rb:287:in `request_encrypt_content'
+wechat (0.8.11) lib/wechat/responder.rb:213:in `verify_signature'
+activesupport (5.0.5) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.5) lib/active_support/callbacks.rb:150:in `block (2 levels) in halting_and_conditional'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.5) lib/active_support/callbacks.rb:151:in `block in halting_and_conditional'
+activesupport (5.0.5) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.5) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (545.7ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:41:34 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (17.5ms)
+  Rendered shared/_album_nav.html.erb (20.0ms)
+  Rendered shared/_album_masthead.html.erb (0.0ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 3542ms (Views: 3521.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:42:01 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_album_masthead.html.erb (0.0ms)
+  Rendered shared/_album_footer.html.erb (0.0ms)
+Completed 200 OK in 5997ms (Views: 5990.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:42:10 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (11.0ms)
+Completed 500 Internal Server Error in 1518ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: jquery-ui-rails.
+Load paths:
+  D:/development/zhongshan/app/assets/config
+  D:/development/zhongshan/app/assets/images
+  D:/development/zhongshan/app/assets/javascripts
+  D:/development/zhongshan/app/assets/stylesheets
+  D:/development/zhongshan/vendor/assets/javascripts
+  D:/development/zhongshan/vendor/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app/assets/images
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/font-awesome-rails-4.7.0.2/app/assets/fonts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/font-awesome-rails-4.7.0.2/app/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actioncable-5.0.5/lib/assets/compiled
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/popper_js-1.11.1/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/bootstrap-4.0.0.beta/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/bootstrap-4.0.0.beta/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/bootstrap-4.0.0.beta/assets/stylesheets):
+     7:     <%= csrf_meta_tags %>
+     8: 
+     9:     <meta name="keywords" content="<%= @seo_keywords %>" />
+    10:     <%= stylesheet_link_tag    'albums', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/assets/stylesheets/albums.scss:2
+app/views/layouts/albums.html.erb:10:in `_app_views_layouts_albums_html_erb__1499046507_112449680'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (600.9ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:42:14 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (7.0ms)
+Completed 500 Internal Server Error in 1816ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: jquery-ui-rails.
+Load paths:
+  D:/development/zhongshan/app/assets/config
+  D:/development/zhongshan/app/assets/images
+  D:/development/zhongshan/app/assets/javascripts
+  D:/development/zhongshan/app/assets/stylesheets
+  D:/development/zhongshan/vendor/assets/javascripts
+  D:/development/zhongshan/vendor/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app/assets/images
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/font-awesome-rails-4.7.0.2/app/assets/fonts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/font-awesome-rails-4.7.0.2/app/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actioncable-5.0.5/lib/assets/compiled
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/popper_js-1.11.1/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/bootstrap-4.0.0.beta/assets/stylesheets
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/bootstrap-4.0.0.beta/assets/javascripts
+  C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/bootstrap-4.0.0.beta/assets/stylesheets):
+     7:     <%= csrf_meta_tags %>
+     8: 
+     9:     <meta name="keywords" content="<%= @seo_keywords %>" />
+    10:     <%= stylesheet_link_tag    'albums', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+  
+app/assets/stylesheets/albums.scss:2
+app/views/layouts/albums.html.erb:10:in `_app_views_layouts_albums_html_erb__1499046507_121205900'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (749.5ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 19:42:33 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (11.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 498ms (Views: 492.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/2" for 127.0.0.1 at 2017-08-23 19:42:42 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/albums
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 2]]
+  Rendered albums/show.html.erb within layouts/albums (30.5ms)
+  Rendered shared/_album_nav.html.erb (1.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.0ms)
+Completed 200 OK in 454ms (Views: 444.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 19:43:22 -0700
+Processing by BlogsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-23 19:43:22 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.5ms)
+  Rendered shared/_application_nav.html.erb (2.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 615ms (Views: 611.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 19:43:23 -0700
+Processing by BlogsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-23 19:43:23 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 482ms (Views: 481.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-08-23 19:43:37 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lWlYMbKRaZhPLYgKLpfm4tK6chUkDF5pBguArc9C1PA217o2vOJpD7debiw14g5XEcNWZIHcZ30pPvUZyGmDsg==", "user"=>{"email"=>"this@guy.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "this@guy.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-08-24 02:43:38.075826"], ["sign_in_count", 2], ["updated_at", "2017-08-24 02:43:38.078324"], ["id", 1]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/blogs
+Completed 302 Found in 252ms (ActiveRecord: 22.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 19:43:38 -0700
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT ? OFFSET ?[0m  [["LIMIT", 4], ["OFFSET", 0]]
+  Rendered collection of blogs/_blog.html.erb [4 times] (2.5ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (37.0ms)
+  Rendered shared/_blog_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  Rendered shared/_blog_sidebar.html.erb (0.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 542ms (Views: 520.4ms | ActiveRecord: 1.5ms)
+
+

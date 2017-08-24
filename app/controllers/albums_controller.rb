@@ -1,8 +1,9 @@
 class AlbumsController < ApplicationController
     layout "albums"
+    #access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: all
 
     def index
-        @albums = Album.all
+        @albums = Album.by_position
         @page_title = "Photo Albums"
     end
 

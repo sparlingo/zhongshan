@@ -6,8 +6,8 @@ class Album < ApplicationRecord
     include Placeholder
     validates_presence_of :title, :subtitle, :main_image
 
-    def self.angular
-        where(subtitle: 'Angular')
+    def self.by_position
+        order("position ASC")
     end
 
     # not needed, but this is an example of how to set scope, I like the way above better though

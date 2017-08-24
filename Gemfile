@@ -57,6 +57,7 @@ gem 'petergate', '~> 1.7'
 # front-end gems
 gem 'bootstrap', '~> 4.0.0.beta'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 # friendlyID
 gem 'friendly_id', '~> 5.1'
@@ -64,4 +65,9 @@ gem 'friendly_id', '~> 5.1'
 # Pagination
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 
+# WeChat
+gem 'wechat', '~> 0.8.11'
 
+
+
+gem 'redis'
