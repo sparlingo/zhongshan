@@ -1,23 +1,40 @@
 <h1>Create a new photo album</h1>
 
 <%= form_for(@album_item) do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+      <div class="form-group">
+        <%= f.label :subtitle %>
+        <%= f.text_field :subtitle, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= f.label :main_image %>
+        <%= f.text_field :main_image, class: 'form-control' %>
+      </div>
+    </div>
+  </div>  
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Album tags</h3>
+      <%= f.fields_for :tags do |tag_form| %>
+        <div class="form-group">
+          <%= tag_form.label :name %>
+          <%= tag_form.text_field :name, class: 'form-control'%>
+        </div>
+      <% end %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
-  </div>
 
-  <div class="field">
-    <%= f.label :main_image %>
-    <%= f.text_field :main_image %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit 'Save Album', class: 'btn btn-primary' %>
   </div>
 <% end %>

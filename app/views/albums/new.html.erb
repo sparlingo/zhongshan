@@ -1,32 +1,4 @@
-<h1>Create a new Album</h1>
+<div class="container portfolio-form">
 
-<%= form_for(@album_item) do |f| %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :subtitle %>
-    <%= f.text_field :subtitle %>
-  </div>
-
-  <div class="field">
-    <%= f.label :main_image %>
-    <%= f.text_field :main_image %>
-  </div>
-
-  <ul>
-    <%= f.fields_for :tags do |tag_form| %>
-      <li>
-        <%= tag_form.label :name %>
-        <%= tag_form.text_field :name %>
-      </li>
-    <% end %>
-  </ul>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <%= render 'form', album_item: @album_item %>
+</div>
