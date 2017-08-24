@@ -11512,3 +11512,644 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 159ms (Views: 150.2ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 16:59:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (4.0ms)
+  Rendered albums/index.html.erb within layouts/albums (17.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 1745ms (Views: 1721.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 16:59:13 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 108ms (Views: 100.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 16:59:43 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 3392ms (Views: 3387.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:01:36 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+Completed 200 OK in 97ms (Views: 91.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:01:46 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+Completed 200 OK in 139ms (Views: 134.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:11:54 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  Rendered collection of albums/_album_item.html.erb [0 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (7.0ms)
+Completed 200 OK in 106ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" ORDER BY "albums"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:15:35 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  Rendered collection of albums/_album_item.html.erb [0 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (13.0ms)
+Completed 200 OK in 607ms (Views: 578.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:15:45 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  Rendered collection of albums/_album_item.html.erb [0 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (5.0ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:18:10 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (14.5ms)
+  Rendered albums/index.html.erb within layouts/albums (32.0ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `thumb_image' for #<Album:0x0000000b85b848>):
+    1: <div class="card">
+    2:     <!-- <%= image_tag album_item.thumb_image unless album_item.thumb_image.nil? %> -->
+    3:     <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+    4:     <p class="card-text">
+    5:         <span><%= link_to album_item.title, album_show_path(album_item) %></span>
+  
+app/views/albums/_album_item.html.erb:2:in `_app_views_albums__album_item_html_erb__1803077124_96652240'
+app/views/albums/index.html.erb:5:in `_app_views_albums_index_html_erb___1290755221_97061240'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (641.1ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:18:40 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (11.0ms)
+  Rendered albums/index.html.erb within layouts/albums (19.1ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `thumb_image' for #<Album:0x0000000c397810>):
+    1: <div class="card">
+    2:     <!-- <%= image_tag album_item.thumb_image unless album_item.thumb_image.nil? %> -->
+    3:     <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+    4:     <p class="card-text">
+    5:         <span><%= link_to album_item.title, album_show_path(album_item) %></span>
+  
+app/views/albums/_album_item.html.erb:2:in `_app_views_albums__album_item_html_erb__1803077124_102542780'
+app/views/albums/index.html.erb:5:in `_app_views_albums_index_html_erb___1290755221_102644620'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (507.3ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:18:52 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (126.2ms)
+  Rendered albums/index.html.erb within layouts/albums (133.2ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `album_show_path' for #<#<Class:0x000000071eb048>:0x0000000cc25090>
+Did you mean?  albums_path):
+    2:     
+    3:     <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+    4:     <p class="card-text">
+    5:         <span><%= link_to album_item.title, album_show_path(album_item) %></span>
+    6:     </p>
+    7: </div>
+  
+app/views/albums/_album_item.html.erb:5:in `_app_views_albums__album_item_html_erb__1803077124_106987160'
+app/views/albums/index.html.erb:5:in `_app_views_albums_index_html_erb___1290755221_107031960'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (515.1ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 17:20:17 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (4.0ms)
+  Rendered albums/index.html.erb within layouts/albums (17.0ms)
+Completed 200 OK in 362ms (Views: 336.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:20:31 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (49.0ms)
+Completed 200 OK in 219ms (Views: 174.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:20:50 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (167.6ms)
+  Rendered albums/index.html.erb within layouts/albums (217.6ms)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `albums_show_path' for #<#<Class:0x000000078b3998>:0x0000000a677a78>
+Did you mean?  albums_path):
+    2:     
+    3:     <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+    4:     <p class="card-text">
+    5:         <span><%= link_to album_item.title, albums_show_path(album_item) %></span>
+    6:     </p>
+    7: </div>
+  
+app/views/albums/_album_item.html.erb:5:in `_app_views_albums__album_item_html_erb___450750105_87175920'
+app/views/albums/index.html.erb:5:in `_app_views_albums_index_html_erb__769680227_87288560'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (504.1ms)
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:21:43 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (50.1ms)
+Completed 200 OK in 223ms (Views: 175.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums/1" for 127.0.0.1 at 2017-08-23 17:21:46 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/albums
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 1]]
+  Rendered albums/show.html.erb within layouts/albums (76.0ms)
+Completed 200 OK in 176ms (Views: 160.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:23:32 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (52.9ms)
+Completed 200 OK in 227ms (Views: 176.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:23:35 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (50.5ms)
+Completed 200 OK in 266ms (Views: 213.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:24:09 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (48.0ms)
+Completed 200 OK in 243ms (Views: 192.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:24:11 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (49.0ms)
+Completed 200 OK in 222ms (Views: 176.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:25:09 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (50.6ms)
+Completed 200 OK in 243ms (Views: 197.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 17:25:16 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (50.5ms)
+Completed 200 OK in 250ms (Views: 194.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums.2" for 127.0.0.1 at 2017-08-23 18:07:57 -0700
+Processing by AlbumsController#index as 
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (51.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 286ms (Views: 226.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 18:08:02 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_application_nav.html.erb (22.0ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 152ms (Views: 136.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:08:08 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 101ms (Views: 95.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:08:09 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 104ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:35:29 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (11.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:35:50 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 103.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:36:28 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+Completed 200 OK in 107ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:36:30 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (8.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:38:01 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (11.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered shared/_album_nav.html.erb (3.0ms)
+Completed 200 OK in 107ms (Views: 101.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-08-23 18:38:05 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PhguCcFy2JUCvPKdISm5rlmhsfH/V46H4q/Y8hqyMGmkxPuMPUKqs8iUsO/ztpsacuQ3TgYMcOompsW1fMli0w=="}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 18:38:05 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered shared/_application_nav.html.erb (8.7ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 126ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-23 18:38:07 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 119ms (Views: 115.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:38:09 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 90.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:38:09 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.3ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 108ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:38:16 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 200 OK in 104ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:41:49 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_album_masthead with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/development/zhongshan/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/kaminari-core-1.0.1/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/devise-4.2.1/app/views"
+):
+    15: 
+    16:     <%= render "shared/album_nav" %>
+    17: 
+    18:     <%= render "shared/album_masthead" %>
+    19: 
+    20:     
+    21:     <%= yield %>
+  
+app/views/layouts/albums.html.erb:18:in `_app_views_layouts_albums_html_erb__1574173962_105177580'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (562.7ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:42:54 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+Completed 200 OK in 104ms (Views: 96.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:47:33 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.0ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+Completed 200 OK in 114ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:50:27 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (13.0ms)
+  Rendered shared/_album_nav.html.erb (2.0ms)
+  Rendered shared/_album_masthead.html.erb (234.5ms)
+Completed 500 Internal Server Error in 364ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_me_path' for #<#<Class:0x000000078b3998>:0x0000000aa13380>
+Did you mean?  about_us_path):
+    3:         <h1 class="jumbotron-heading">ZWIE | Kindergarten</h1>
+    4:         <p class="lead text-muted">Kindergartens: they're like a garden for children</p>
+    5:         <p>
+    6:           <%= link_to 'Find out more about us', about_me_path, class: 'btn btn-primary' %>
+    7:           <%= link_to 'Read our blog', blogs_path, class: 'btn, btn-secondary' %>
+    8:         </p>
+    9:     </div>
+  
+app/views/shared/_album_masthead.html.erb:6:in `_app_views_shared__album_masthead_html_erb___247408395_106607440'
+app/views/layouts/albums.html.erb:18:in `_app_views_layouts_albums_html_erb__1574173962_89072460'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (516.5ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:50:38 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+Completed 200 OK in 155ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:50:45 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+Completed 200 OK in 173ms (Views: 167.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:51:04 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (10.0ms)
+  Rendered shared/_album_nav.html.erb (0.0ms)
+  Rendered shared/_album_masthead.html.erb (0.0ms)
+Completed 200 OK in 118ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 18:51:06 -0700
+Processing by BlogsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-23 18:51:06 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 172ms (Views: 170.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-08-23 18:51:06 -0700
+Processing by BlogsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-08-23 18:51:06 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 165ms (Views: 163.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:51:09 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+Completed 200 OK in 107ms (Views: 101.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:53:26 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (0.5ms)
+  Rendered albums/index.html.erb within layouts/albums (8.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_album_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/development/zhongshan/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/kaminari-core-1.0.1/app/views"
+  * "C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/devise-4.2.1/app/views"
+):
+    19: 
+    20:     <%= yield %>
+    21: 
+    22:     <%= render "shared/album_footer" %>
+    23: 
+    24:   </body>
+    25: </html>
+  
+app/views/layouts/albums.html.erb:22:in `_app_views_layouts_albums_html_erb__1574173962_107087700'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (594.0ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-23 18:53:40 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums"[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (3.5ms)
+  Rendered albums/index.html.erb within layouts/albums (35.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 197ms (Views: 183.7ms | ActiveRecord: 0.0ms)
+
+
