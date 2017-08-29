@@ -77,3 +77,6 @@ gem 'mini_magick', '~> 4.8'
 
 # cocoon for jquery forms
 gem 'cocoon', '~> 1.2', '>= 1.2.10'
+
+# gritter for notifications
+gem 'gritter', '~> 1.2'

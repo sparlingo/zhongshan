@@ -1,6 +1,12 @@
 <h1>Create a new photo album</h1>
 
 <%= form_for(@album_item) do |f| %>
+  <% if @album_item.errors.any? %>
+    <% @album_item.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "ZWIE", sticky: false) %>
+    <% end %>
+  <% end %>
+
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
