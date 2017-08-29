@@ -19,6 +19,20 @@ puts "3 tags created"
 end
 puts "3 topics created"
 
+5.times do |album|
+    Album.create!(
+        title: "This album is #{album}",
+        subtitle: "This is the fucking subtitle",
+        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
+        typesetting, remaining essentially unchanged.",
+        main_image: "mainImage",
+        thumb_image: "thumbImage"
+    )
+end
+puts "5 albums created"
+
 10.times do |blog|
     Blog.create!(
         title: "My Blog Post #{blog}",
@@ -33,11 +47,3 @@ puts "3 topics created"
 end
 puts "10 blog posts created"
 
-5.times do |album|
-    Album.create!(
-        title: "This album is #{album}",
-        subtitle: "This is the fucking subtitle",
-        main_image: "http://placehold.it/240x160"
-    )
-end
-puts "5 albums created"

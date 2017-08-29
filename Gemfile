@@ -32,6 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 
+# dotenv for development and test?
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -67,7 +69,11 @@ gem 'kaminari', '~> 1.0', '>= 1.0.1'
 
 # WeChat
 gem 'wechat', '~> 0.8.11'
-
-
-
 gem 'redis'
+
+# Carrierwave for uploading files
+gem 'carrierwave', '~> 1.1'
+gem 'mini_magick', '~> 4.8'
+
+# cocoon for jquery forms
+gem 'cocoon', '~> 1.2', '>= 1.2.10'

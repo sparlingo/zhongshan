@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container album-container">
     <div class="row">
         <div class="col-md-7">
-            <%= image_tag @album_item.main_image %>
+            <%= image_tag album_img(@album_item.main_image, 'main'), width: '100%' %>
         </div>
         <div class="col-md-5">
             <h1><%= @album_item.title %></h1>
@@ -9,10 +9,18 @@
 
             <hr>
 
-            <h2>Tags</h2>
+            <p><%= @album_item.body %></p>
+
+            <h3>Tags</h3>
             <% @album_item.tags.each do |t| %>
-            <p>{{ t.name }}</p>
+                <p><%= t.name %></p>
             <% end %>
+
+        <% if logged_in?(:admin) %>
+            <div>
+                <%= link_to "Edit item", edit_album_path(@album_item), class: 'btn btn-warning' %>
+            </div>
+        <% end %>
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@
 
     <%= render "shared/album_nav" %>
 
-    <%= render "shared/album_masthead" unless logged_in?(:admin) %>
+    <%= render "shared/album_masthead" unless logged_in? %>
 
     <%= yield %>
 

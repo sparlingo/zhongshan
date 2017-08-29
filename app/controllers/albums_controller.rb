@@ -1,15 +1,22 @@
 class AlbumsController < ApplicationController
     layout "albums"
-    #access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, admin: all
+    #access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :sort]}, admin: all
 
     def index
         @albums = Album.by_position
         @page_title = "Photo Albums"
     end
 
+    def sort
+        params[:order].each do |key, value|
+            Album.find(value[:id]).update(position: value[:position])
+        end
+
+        render nothing: true
+    end
+
     def new
         @album_item = Album.new
-        3.times { @album_item.tags.build }
     end
 
     def create
@@ -55,7 +62,15 @@ class AlbumsController < ApplicationController
 
     private
         def portfolio_params
-            params.require(:album).permit(:title, :subtitle, :main_image, 
-                                        tags_attributes: [:name])
+            params.require(:album).permit(:title, 
+                                            :subtitle,
+                                            :body,
+                                            :main_image, 
+                                            :thumb_image,
+                                            tags_attributes: [:id, :name, :_destroy])
+        end
+
+        def set_album_item
+            @album_iem = Album.find(params[:id])
         end
 end
