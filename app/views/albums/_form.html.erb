@@ -3,7 +3,7 @@
 <%= form_for(@album_item) do |f| %>
   <% if @album_item.errors.any? %>
     <% @album_item.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "ZWIE", sticky: false) %>
+      <%= alert_generator error %>
     <% end %>
   <% end %>
 

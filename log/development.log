@@ -18590,3 +18590,198 @@ Processing by AlbumsController#create as HTML
 Completed 200 OK in 626ms (Views: 617.0ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/albums" for 127.0.0.1 at 2017-08-29 20:00:20 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (11.0ms)
+  Rendered albums/index.html.erb within layouts/albums (40.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.0ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 3832ms (Views: 3772.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-29 20:00:35 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (8.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (1.0ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 638ms (Views: 630.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/2" for 127.0.0.1 at 2017-08-29 20:00:39 -0700
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/albums
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 2]]
+  Rendered albums/show.html.erb within layouts/albums (75.5ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    16:                 <p><%= t.name %></p>
+    17:             <% end %>
+    18: 
+    19:         <% if logged_in?(:admin) %>
+    20:             <div>
+    21:                 <%= link_to "Edit item", edit_album_path(@album_item), class: 'btn btn-warning' %>
+    22:             </div>
+  
+app/controllers/application_controller.rb:17:in `logged_in?'
+app/views/albums/show.html.erb:19:in `_app_views_albums_show_html_erb___823834906_111311080'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (814.5ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-29 20:00:44 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 563ms (Views: 558.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2017-08-29 20:00:50 -0700
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/albums
+  Rendered albums/_tag_fields.html.erb (1.0ms)
+  Rendered albums/_form.html.erb (123.0ms)
+  Rendered albums/new.html.erb within layouts/albums (128.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 705ms (Views: 694.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2017-08-29 20:00:57 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mAHfhoQ8ewYZ26A+bRHJW5gRRpgSyB4mnsupm7JB5VzTI2tOzeRMX3D66kCU1Y4oHlroL5A2sFRCttFOzR/KIg==", "album"=>{"title"=>"fdfsdf", "subtitle"=>"", "body"=>""}, "commit"=>"Save Album"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering albums/new.html.erb within layouts/albums
+  Rendered albums/_tag_fields.html.erb (0.5ms)
+  Rendered albums/_form.html.erb (8.0ms)
+  Rendered albums/new.html.erb within layouts/albums (15.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (3.0ms)
+Completed 200 OK in 585ms (Views: 579.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2017-08-29 20:03:18 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6yNUFWJEFGpd3JKHxaP+GCGM7hmd31qF7rCQCPoHeFGgAeDdK5wjMzT92Pk8Z7lrp8dArh8h9PcyzejdhVlXLw==", "album"=>{"title"=>"fdfsdf", "subtitle"=>"w32434324", "body"=>"fsfwerewrwerer"}, "commit"=>"Save Album"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["title", "fdfsdf"], ["subtitle", "w32434324"], ["created_at", "2017-08-30 03:03:18.869517"], ["updated_at", "2017-08-30 03:03:18.869517"], ["body", "fsfwerewrwerer"]]
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/albums
+Completed 302 Found in 35ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-29 20:03:18 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [6 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (9.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 500 Internal Server Error in 937ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `alerts' for #<#<Class:0x00000007819208>:0x000000092dfe48>
+Did you mean?  alert):
+    21: 
+    22:     <%= render "shared/album_footer" %>
+    23: 
+    24:     <% alerts %>
+    25: 
+    26:   </body>
+    27: </html>
+  
+app/views/layouts/albums.html.erb:24:in `_app_views_layouts_albums_html_erb__759733358_76970900'
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (722.0ms)
+Started GET "/albums" for 127.0.0.1 at 2017-08-29 20:04:42 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at D:/development/zhongshan/app/controllers/concerns/devise_whitelist.rb:5)
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at D:/development/zhongshan/app/controllers/concerns/set_source.rb:5)
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [6 times] (1.5ms)
+  Rendered albums/index.html.erb within layouts/albums (24.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 672ms (Views: 648.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/albums/new" for 127.0.0.1 at 2017-08-29 20:04:49 -0700
+Processing by AlbumsController#new as HTML
+  Rendering albums/new.html.erb within layouts/albums
+  Rendered albums/_tag_fields.html.erb (1.0ms)
+  Rendered albums/_form.html.erb (18.5ms)
+  Rendered albums/new.html.erb within layouts/albums (23.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.0ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 625ms (Views: 618.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/albums" for 127.0.0.1 at 2017-08-29 20:04:56 -0700
+Processing by AlbumsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+5uXwYssbHM4860+OAWwk3pXby+tpc7veSkgjqZdIlSwuSMJwvRbKlHS50DBwffg/BzBmC9bYJ2lVFhb2QMNKg==", "album"=>{"title"=>"wer32432432", "subtitle"=>"3243535345", "body"=>"32432fwfsdfsdfdsf"}, "commit"=>"Save Album"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (11.7ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body") VALUES (?, ?, ?, ?, ?)[0m  [["title", "wer32432432"], ["subtitle", "3243535345"], ["created_at", "2017-08-30 03:04:56.329666"], ["updated_at", "2017-08-30 03:04:56.329666"], ["body", "32432fwfsdfsdfdsf"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/albums
+Completed 302 Found in 31ms (ActiveRecord: 24.7ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-08-29 20:04:56 -0700
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [7 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (8.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.0ms)
+Completed 200 OK in 609ms (Views: 602.1ms | ActiveRecord: 0.0ms)
+
+
