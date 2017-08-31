@@ -42,8 +42,8 @@ puts "5 albums created"
         typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
         containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
         versions of Lorem Ipsum.",
-        topic_id: Topic.last.id
+        topic_id: Topic.last.id,
+        status: 1
     )
 end
 puts "10 blog posts created"
-

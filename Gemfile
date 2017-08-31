@@ -70,6 +70,7 @@ gem 'kaminari', '~> 1.0', '>= 1.0.1'
 # WeChat
 gem 'wechat', '~> 0.8.11'
 gem 'redis'
+gem 'omniauth-wechat-oauth2', '~> 0.1.0'
 
 # Carrierwave for uploading files
 gem 'carrierwave', '~> 1.1'
@@ -80,3 +81,6 @@ gem 'cocoon', '~> 1.2', '>= 1.2.10'
 
 # gritter for notifications
 gem 'gritter', '~> 1.2'
+
+# for markdown
+gem 'redcarpet', '~> 3.4'

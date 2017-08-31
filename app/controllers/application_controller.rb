@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  #before_action :authenticate_user!
   include DeviseWhitelist
   include SetSource
-  include CurrentUserConcern
+  #include CurrentUserConcern
+  include DefaultPageContent
 
   before_action :set_copyright
 
@@ -10,13 +12,9 @@ class ApplicationController < ActionController::Base
     @copyright = ZhonshanViewTool::Renderer.copyright 'Kevin Sparling', 'All rights reserved'
   end
 
-  def current_user
-    @current_user ||= User.find_by_id(session[:user])
-  end
-
-  def logged_in?
-    current_user != nil
-  end
+  #def current_user
+    #@current_user ||= User.find_by_id(session[:user])
+  #end
 
 end
 
