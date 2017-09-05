@@ -2,5 +2,6 @@
     <div class="container">
         <h1 class="blog-title">Kevin Laoshi's Blog</h1>
         <p class="lead blog-description">No I'm not guangtou Chiang!</p>
+        <span><%= link_to 'New Blog Post', new_blog_path if logged_in?(:site_admin) %></span>
     </div>
 </div>
