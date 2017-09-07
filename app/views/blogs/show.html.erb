@@ -17,7 +17,9 @@
   </nav>
 
   <p>
-    <%= @blog.body %>
+    <div class="blog-post">
+      <%= @blog.body %>
+    </div>
   </p>
 
   <%= render 'comments/comment_form' %>

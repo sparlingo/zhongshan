@@ -1,6 +1,8 @@
-<div class="card">
-    <%= image_tag album_img(album_item.thumb_image, 'thumb') %>
-    <p class="card-text">
-        <span><%= link_to album_item.title, album_path(album_item) %></span>
-    </p>
+<div class="col-md-4">
+    <div class="card" data-id="<%= album_item.id %>">
+        <%= image_tag album_img(album_item.thumb_image, 'thumb'), width: '100%' %>
+        <p class="card-text">
+            <span><%= link_to album_item.title, album_path(album_item) %></span>
+        </p>
+    </div>
 </div>

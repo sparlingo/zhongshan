@@ -202,3 +202,20 @@ body {
   background: image-url('ivy.jpg') no-repeat;
   background-size: cover;
 }
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  padding: 40px;
+}
+
+.profile-img {
+  padding-right: 10px;
+}
+
+.app-card-container a {
+  color: blue;
+}
