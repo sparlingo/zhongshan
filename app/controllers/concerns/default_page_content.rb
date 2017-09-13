@@ -6,7 +6,7 @@ module DefaultPageContent
     end
 
     def set_page_defaults
-        @page_title = "ZWIE | Kindergarten"
+        @page_title = " Kindergarten"
         @seo_keywords = "Kevin Sparling"
     end
 end

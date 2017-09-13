@@ -96,17 +96,22 @@ h6, .h6 {
 }
 .blog-title {
   margin-bottom: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: normal;
+  padding-top: 20px;
 }
 .blog-description {
   font-size: 1.1rem;
   color: #999;
 }
+.blog-main {
+  
+}
 
 @media (min-width: 40em) {
   .blog-title {
     font-size: 3.5rem;
+    padding-top: 65px;
   }
 }
 
@@ -151,7 +156,7 @@ h6, .h6 {
 }
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
