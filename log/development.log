@@ -30612,3 +30612,508 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 659ms (Views: 638.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-14 08:23:02 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (107.4ms)
+Started GET "/register" for 127.0.0.1 at 2017-09-14 08:24:23 +0800
+Completed 401 Unauthorized in 122572ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 08:27:56 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (92.0ms)
+  Rendered shared/_application_nav.html.erb (23.0ms)
+  Rendered shared/_footer.html.erb (5.0ms)
+Completed 200 OK in 144784ms (Views: 144084.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 08:31:37 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (3.0ms)
+  Rendered shared/_application_nav.html.erb (5.0ms)
+  Rendered shared/_footer.html.erb (2.0ms)
+Completed 200 OK in 4493ms (Views: 4391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-09-14 08:33:02 +0800
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (114.0ms)
+  Rendered shared/_application_nav.html.erb (18.0ms)
+  Rendered shared/_footer.html.erb (2.0ms)
+Completed 200 OK in 19948ms (Views: 19811.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-09-14 08:33:26 +0800
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (727.0ms)
+Started GET "/contact" for 127.0.0.1 at 2017-09-14 08:33:40 +0800
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (3.0ms)
+  Rendered shared/_application_nav.html.erb (15.0ms)
+  Rendered shared/_footer.html.erb (3.0ms)
+Completed 200 OK in 21276ms (Views: 21143.6ms | ActiveRecord: 0.0ms)
+
+
+  Rendered shared/_application_nav.html.erb (40.0ms)
+  Rendered shared/_footer.html.erb (7.5ms)
+Completed 200 OK in 18273ms (Views: 18170.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:34:10 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (18.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (44.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (4014.2ms)
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (6585.3ms)
+  Rendered shared/_album_nav.html.erb (8.0ms)
+  Rendered shared/_blog_masthead.html.erb (8.0ms)
+  [1m[35mSQL (6.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (2422.1ms)
+  Rendered shared/_blog_footer.html.erb (20.0ms)
+Completed 200 OK in 32986ms (Views: 32715.4ms | ActiveRecord: 61.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:34:43 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (18.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (14.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (1319.0ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:34:47 +0800
+Processing by BlogsController#index as HTML
+  Rendered blogs/index.html.erb within layouts/blog (2236.1ms)
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (6.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (2107.8ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (4686.4ms)
+  Rendered shared/_album_nav.html.erb (6.0ms)
+  Rendered shared/_blog_masthead.html.erb (3.0ms)
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (2858.1ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 31203ms (Views: 30887.3ms | ActiveRecord: 22.0ms)
+
+
+  Rendered shared/_album_nav.html.erb (4.0ms)
+  Rendered shared/_blog_masthead.html.erb (3.0ms)
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (4367.3ms)
+  Rendered shared/_blog_footer.html.erb (4.0ms)
+Completed 200 OK in 40655ms (Views: 40507.5ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 08:39:36 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (51.0ms)
+  Rendered shared/_application_nav.html.erb (12.0ms)
+  Rendered shared/_footer.html.erb (3.0ms)
+Completed 200 OK in 9586ms (Views: 9449.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:41:18 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (98.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (414.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (939.9ms)
+  Rendered shared/_album_nav.html.erb (4.0ms)
+  Rendered shared/_blog_masthead.html.erb (2.0ms)
+  [1m[35mSQL (7.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (36.0ms)
+  Rendered shared/_blog_footer.html.erb (2.0ms)
+Completed 200 OK in 6091ms (Views: 5880.6ms | ActiveRecord: 106.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 08:42:38 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (5.0ms)
+  Rendered shared/_application_nav.html.erb (12.0ms)
+  Rendered shared/_footer.html.erb (2.5ms)
+Completed 200 OK in 8439ms (Views: 8051.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:44:01 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (4.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (7.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (465.0ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (884.0ms)
+  Rendered shared/_album_nav.html.erb (13.0ms)
+  Rendered shared/_blog_masthead.html.erb (4.0ms)
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (21.4ms)
+  Rendered shared/_blog_footer.html.erb (2.0ms)
+Completed 200 OK in 7580ms (Views: 7492.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:45:35 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (4.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (3.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (368.0ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (785.1ms)
+  Rendered shared/_album_nav.html.erb (6.5ms)
+  Rendered shared/_blog_masthead.html.erb (3.5ms)
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (18.0ms)
+  Rendered shared/_blog_footer.html.erb (4.0ms)
+Completed 200 OK in 6135ms (Views: 6061.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:49:33 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (4.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (6.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (384.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (695.1ms)
+  Rendered shared/_album_nav.html.erb (5.5ms)
+  Rendered shared/_blog_masthead.html.erb (4.5ms)
+  [1m[35mSQL (1.5ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (16.0ms)
+  Rendered shared/_blog_footer.html.erb (2.1ms)
+Completed 200 OK in 5205ms (Views: 5131.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 08:50:38 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (292.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (552.8ms)
+  Rendered shared/_album_nav.html.erb (3.0ms)
+  Rendered shared/_blog_masthead.html.erb (2.0ms)
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (15.0ms)
+  Rendered shared/_blog_footer.html.erb (2.0ms)
+Completed 200 OK in 4513ms (Views: 4446.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:32:28 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (25.0ms)
+  Rendered shared/_application_nav.html.erb (8.0ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 5581ms (Views: 5464.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:32:34 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (4.0ms)
+  Rendered shared/_application_nav.html.erb (5.0ms)
+  Rendered shared/_footer.html.erb (3.0ms)
+Completed 200 OK in 4450ms (Views: 4360.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 09:33:27 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (4.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (4.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (415.0ms)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (862.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 09:33:32 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (799.0ms)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (1540.0ms)
+  Rendered shared/_album_nav.html.erb (8.0ms)
+  Rendered shared/_blog_masthead.html.erb (6.0ms)
+  [1m[35mSQL (17.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (128.0ms)
+  Rendered shared/_blog_footer.html.erb (4.0ms)
+Completed 200 OK in 15969ms (Views: 15869.2ms | ActiveRecord: 24.0ms)
+
+
+  Rendered shared/_album_nav.html.erb (13.0ms)
+  Rendered shared/_blog_masthead.html.erb (3.0ms)
+  [1m[35mSQL (3.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (53.0ms)
+  Rendered shared/_blog_footer.html.erb (4.0ms)
+Completed 200 OK in 15368ms (Views: 15280.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 09:33:48 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (3.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (360.0ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (689.0ms)
+  Rendered shared/_album_nav.html.erb (4.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (22.0ms)
+  Rendered shared/_blog_footer.html.erb (2.0ms)
+Completed 200 OK in 5452ms (Views: 5365.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/blogs/my-blog-post-0" for 127.0.0.1 at 2017-09-14 09:34:38 +0800
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"my-blog-post-0"}
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "my-blog-post-0"], ["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = 1[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mTopic Load (1.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered comments/_comment_form.html.erb (2.0ms)
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered blogs/show.html.erb within layouts/blog (296.9ms)
+  Rendered shared/_album_nav.html.erb (3.0ms)
+  Rendered shared/_blog_masthead.html.erb (2.0ms)
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (18.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 5206ms (Views: 4789.6ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-09-14 09:34:43 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-09-14 09:34:45 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: keep-alive, Upgrade, HTTP_UPGRADE: websocket)
+BlogsChannel is transmitting the subscription confirmation
+BlogsChannel is streaming from blogs_1_channel
+Started GET "/albums" for 127.0.0.1 at 2017-09-14 09:36:15 +0800
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (7.0ms)
+  Rendered albums/index.html.erb within layouts/albums (129.0ms)
+Started GET "/albums" for 127.0.0.1 at 2017-09-14 09:36:18 +0800
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (8.0ms)
+  Rendered albums/index.html.erb within layouts/albums (118.0ms)
+Started GET "/albums" for 127.0.0.1 at 2017-09-14 09:36:23 +0800
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (5.0ms)
+  Rendered albums/index.html.erb within layouts/albums (150.0ms)
+  Rendered shared/_album_nav.html.erb (4.0ms)
+Started GET "/albums" for 127.0.0.1 at 2017-09-14 09:36:25 +0800
+  Rendered shared/_album_masthead.html.erb (3.0ms)
+Processing by AlbumsController#index as HTML
+  Rendered shared/_album_footer.html.erb (1.0ms)
+Completed 200 OK in 10054ms (Views: 9979.5ms | ActiveRecord: 4.0ms)
+
+
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (1.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (8.0ms)
+  Rendered albums/index.html.erb within layouts/albums (240.0ms)
+Completed 500 Internal Server Error in 4261ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    11: 
+    12:     <%= favicon_link_tag 'favicons/favicons.png' %>
+    13:     <%= stylesheet_link_tag    'albums', media: 'all', 'data-turbolinks-track': 'reload' %>
+    14:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    15:   </head>
+    16: 
+    17:   <body>
+  
+app/views/layouts/albums.html.erb:14:in `_app_views_layouts_albums_html_erb__1143825099_121887340'
+  Rendered shared/_album_nav.html.erb (6.0ms)
+  Rendered shared/_album_masthead.html.erb (2.0ms)
+  Rendered shared/_album_footer.html.erb (1.0ms)
+Completed 200 OK in 12455ms (Views: 12376.0ms | ActiveRecord: 1.0ms)
+
+
+  Rendered shared/_album_nav.html.erb (8.0ms)
+  Rendered shared/_album_masthead.html.erb (3.0ms)
+  Rendered shared/_album_footer.html.erb (1.0ms)
+Completed 200 OK in 10113ms (Views: 10027.6ms | ActiveRecord: 1.0ms)
+
+
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (31.0ms)
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (5774.3ms)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-09-14 09:40:20 +0800
+Started GET "/albums" for 127.0.0.1 at 2017-09-14 09:40:20 +0800
+BlogsChannel stopped streaming from blogs_1_channel
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (2.0ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (10.0ms)
+  Rendered albums/index.html.erb within layouts/albums (123.0ms)
+  Rendered shared/_album_nav.html.erb (5.0ms)
+  Rendered shared/_album_masthead.html.erb (3.0ms)
+  Rendered shared/_album_footer.html.erb (1.7ms)
+Completed 200 OK in 5387ms (Views: 5274.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:41:14 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+  Rendered shared/_application_nav.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 4580ms (Views: 4526.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-14 09:41:18 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.0ms)
+  Rendered shared/_application_nav.html.erb (6.0ms)
+  Rendered shared/_footer.html.erb (2.0ms)
+Completed 200 OK in 4267ms (Views: 4207.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 09:47:35 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (6.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (5.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (5.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (6.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (3647.2ms)
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (6267.7ms)
+  Rendered shared/_album_nav.html.erb (15.0ms)
+  Rendered shared/_blog_masthead.html.erb (6.0ms)
+  [1m[35mSQL (2.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (167.0ms)
+  Rendered shared/_blog_footer.html.erb (3.0ms)
+Completed 200 OK in 32168ms (Views: 31493.2ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 09:48:09 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (8.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (2.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (3.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (567.0ms)
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (1069.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-09-14 09:48:15 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (3.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (3.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (551.0ms)
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."status" = ?[0m  [["status", 1]]
+  Rendered blogs/index.html.erb within layouts/blog (1384.0ms)
+Completed 500 Internal Server Error in 3969ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    12:     <%= favicon_link_tag 'favicons/favicons.png' %>
+    13:     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css"/> 
+    14:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    15:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    16:   </head>
+    17: 
+    18:   <body>
+  
+app/views/layouts/blog.html.erb:15:in `_app_views_layouts_blog_html_erb__97189_106252960'
+  Rendered shared/_album_nav.html.erb (4.0ms)
+  Rendered shared/_blog_masthead.html.erb (2.0ms)
+  [1m[35mSQL (3.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (29.0ms)
+  Rendered shared/_blog_footer.html.erb (2.0ms)
+Completed 200 OK in 13552ms (Views: 13302.0ms | ActiveRecord: 14.0ms)
+
+
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (34.0ms)
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.0ms)
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (5404.0ms)
