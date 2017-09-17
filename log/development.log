@@ -34526,3 +34526,1757 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 834ms (Views: 817.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 17:17:24 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (118.8ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (209.8ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (49.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 32519ms (Views: 32448.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 17:18:07 +0800
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (93.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (169.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (5.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 986ms (Views: 965.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/new" for 127.0.0.1 at 2017-09-17 17:18:24 +0800
+Processing by BlogsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/new.html.erb within layouts/blog
+  [1m[36mTopic Load (0.0ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered blogs/_form.html.erb (59.0ms)
+  Rendered blogs/new.html.erb within layouts/blog (76.0ms)
+  Rendered shared/_album_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (5.0ms)
+  Rendered shared/_blog_footer.html.erb (1.0ms)
+Completed 200 OK in 885ms (Views: 861.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/ckeditor/pictures?CKEditor=blog_body&CKEditorFuncNum=1&langCode=en" for 127.0.0.1 at 2017-09-17 20:36:47 +0800
+Processing by Ckeditor::PicturesController#index as HTML
+  Parameters: {"CKEditor"=>"blog_body", "CKEditorFuncNum"=>"1", "langCode"=>"en"}
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/ckeditor-4.2.4/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application
+  [1m[36mCkeditor::Picture Load (0.0ms)[0m  [1m[34mSELECT  "ckeditor_assets".* FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture') ORDER BY id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 24], ["OFFSET", 0]]
+  Rendered collection of C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/ckeditor-4.2.4/app/views/ckeditor/shared/_asset.html.erb [0 times] (0.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "ckeditor_assets" WHERE "ckeditor_assets"."type" IN ('Ckeditor::Picture')[0m
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/ckeditor-4.2.4/app/views/ckeditor/pictures/index.html.erb within layouts/ckeditor/application (63.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/ckeditor-4.2.4/app/views/ckeditor/shared/_asset_tmpl.html.erb (1.0ms)
+Completed 200 OK in 1089ms (Views: 1051.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/ckeditor/pictures?qqfile=IMG_1307.JPG" for 127.0.0.1 at 2017-09-17 20:37:15 +0800
+Processing by Ckeditor::PicturesController#create as */*
+  Parameters: {"qqfile"=>"IMG_1307.JPG"}
+Command :: file -b --mime "C:/Users/kevin/AppData/Local/Temp/aac86b44fc9c8c60e22c227abf6965d420170917-16364-povi3z.JPG"
+[paperclip] Content Type Spoof: Filename IMG_1307.JPG (image/jpeg from Headers, ["image/jpeg"] from Extension), content type discovered from file command: . See documentation to allow this combination.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime "C:/Users/kevin/AppData/Local/Temp/aac86b44fc9c8c60e22c227abf6965d420170917-16364-1d4fgct.JPG"
+[paperclip] Content Type Spoof: Filename IMG_1307.JPG (application/octet-stream from Headers, ["image/jpeg"] from Extension), content type discovered from file command: . See documentation to allow this combination.
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+Completed 200 OK in 171ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/ckeditor/pictures?&CKEditor=blog_body&CKEditorFuncNum=1&langCode=en" for 127.0.0.1 at 2017-09-17 20:38:14 +0800
+Processing by Ckeditor::PicturesController#create as HTML
+  Parameters: {"upload"=>#<ActionDispatch::Http::UploadedFile:0x000000103cf8b0 @tempfile=#<Tempfile:C:/Users/kevin/AppData/Local/Temp/RackMultipart20170917-16364-h4y3fy.JPG>, @original_filename="IMG_1307.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"upload\"; filename=\"IMG_1307.JPG\"\r\nContent-Type: image/jpeg\r\n">, "ckCsrfToken"=>"2XX115204DgXV7hzymIKUcNa0It2HbxO9d6lRiH2", "CKEditor"=>"blog_body", "CKEditorFuncNum"=>"1", "langCode"=>"en"}
+Command :: file -b --mime "C:/Users/kevin/AppData/Local/Temp/aac86b44fc9c8c60e22c227abf6965d420170917-16364-1whc798.JPG"
+[paperclip] Content Type Spoof: Filename IMG_1307.JPG (image/jpeg from Headers, ["image/jpeg"] from Extension), content type discovered from file command: . See documentation to allow this combination.
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime "C:/Users/kevin/AppData/Local/Temp/aac86b44fc9c8c60e22c227abf6965d420170917-16364-gkp9gy.JPG"
+[paperclip] Content Type Spoof: Filename IMG_1307.JPG (application/octet-stream from Headers, ["image/jpeg"] from Extension), content type discovered from file command: . See documentation to allow this combination.
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 82ms (Views: 9.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/blogs" for 127.0.0.1 at 2017-09-17 20:42:40 +0800
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0g8GckW8HIxSMPcDpwqfTA/meBCmyo30xBM/oGDlncgwLXREjroHxqwwkNOLXU/7LxUtYPwJ4t3wxSsVC5JVUw==", "blog"=>{"title"=>"This is the beginning", "topic_id"=>"1", "status"=>"published", "body"=>"<div>Think back to when you were a child, did the summers seem to last forever? They certainly seemed longer than they do now, if you&#39;re lucky enough to get a month or six weeks off between school semesters - how much can you do really? The kids though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>Every year is new, every semester is new. New teachers, new students, things that used to be a problem are fixed and things that used to work great need a little adjustment. Great!&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>This semester I&#39;ll be working on developing the IB curriculum for our new class that will be rolled out next year. I will be writing one blog post here each week, maybe a little more but no less. I hope this will be as much fun to read as to write. Let&#39;s get started!</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This is the beginning"], ["body", "<div>Think back to when you were a child, did the summers seem to last forever? They certainly seemed longer than they do now, if you&#39;re lucky enough to get a month or six weeks off between school semesters - how much can you do really? The kids though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>Every year is new, every semester is new. New teachers, new students, things that used to be a problem are fixed and things that used to work great need a little adjustment. Great!&nbsp;</div>\r\n\r\n<div>&nbsp;</div>\r\n\r\n<div>This semester I&#39;ll be working on developing the IB curriculum for our new class that will be rolled out next year. I will be writing one blog post here each week, maybe a little more but no less. I hope this will be as much fun to read as to write. Let&#39;s get started!</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n"], ["created_at", "2017-09-17 12:42:40.385318"], ["updated_at", "2017-09-17 12:42:40.385318"], ["slug", "this-is-the-beginning"], ["status", 1], ["topic_id", 1]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/blogs/this-is-the-beginning
+Completed 302 Found in 95ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/blogs/this-is-the-beginning" for 127.0.0.1 at 2017-09-17 20:42:40 +0800
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"this-is-the-beginning"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = 13[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mTopic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered comments/_comment_form.html.erb (0.5ms)
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered blogs/show.html.erb within layouts/blog (57.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (5.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 30793ms (Views: 30709.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2017-09-17 20:43:12 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2017-09-17 20:43:12 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+BlogsChannel is transmitting the subscription confirmation
+BlogsChannel is streaming from blogs_13_channel
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 20:43:21 +0800
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (108.0ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (206.0ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (4.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 1105ms (Views: 1080.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/blogs/wrwerewrewr" for 127.0.0.1 at 2017-09-17 20:43:33 +0800
+Processing by BlogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R8qhvCmOdSit5QX7tr/gJRMtamwRO+/4zipjRiBaRM+l6NOK4ohuYlPlYiua6DCSM94/HEv4gNH6/HfzSy2MVA==", "id"=>"wrwerewrewr"}
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "wrwerewrewr"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = ?[0m  [["blog_id", 11]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "blogs" WHERE "blogs"."id" = ?[0m  [["id", 11]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/blogs
+Completed 302 Found in 20ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 20:43:33 +0800
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered collection of blogs/_blog.html.erb [5 times] (93.9ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/blog (169.8ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.0ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (3.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 1164ms (Views: 1142.5ms | ActiveRecord: 1.0ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2017-09-17 20:43:34 +0800
+BlogsChannel stopped streaming from blogs_13_channel
+Started GET "/blogs/this-is-the-beginning/edit" for 127.0.0.1 at 2017-09-17 20:45:08 +0800
+Processing by BlogsController#edit as HTML
+  Parameters: {"id"=>"this-is-the-beginning"}
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  Rendering blogs/edit.html.erb within layouts/blog
+  [1m[36mTopic Load (0.0ms)[0m  [1m[34mSELECT "topics".* FROM "topics"[0m
+  Rendered blogs/_form.html.erb (10.0ms)
+  Rendered blogs/edit.html.erb within layouts/blog (46.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (5.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 29899ms (Views: 29872.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (8.5ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (6.5ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170917001405)[0m
+  [1m[35m (6.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170916145642);
+
+[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kevinsparling@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "kevinsparling@hotmail.com"], ["name", "Kevin Sparling"], ["encrypted_password", "$2a$11$MXAnxy3HZ2FZZ2EgV5ibkuU6mg4auFgn.osl8EJ.MY7yOelvmo37q"], ["created_at", "2017-09-17 12:48:19.095936"], ["updated_at", "2017-09-17 12:48:19.095936"], ["roles", "site_admin"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.com"], ["name", "Testy McTesterton"], ["encrypted_password", "$2a$11$esE1b914rGGBVIAZCAjz0evjzbFSxVOCJnN6Pd.iKKJ/ju6mgXf2m"], ["created_at", "2017-09-17 12:48:19.214435"], ["updated_at", "2017-09-17 12:48:19.214435"], ["roles", "user"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB0"], ["created_at", "2017-09-17 12:48:19.251936"], ["updated_at", "2017-09-17 12:48:19.251936"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB1"], ["created_at", "2017-09-17 12:48:19.261935"], ["updated_at", "2017-09-17 12:48:19.261935"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB2"], ["created_at", "2017-09-17 12:48:19.271935"], ["updated_at", "2017-09-17 12:48:19.271935"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB3"], ["created_at", "2017-09-17 12:48:19.280935"], ["updated_at", "2017-09-17 12:48:19.280935"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB4"], ["created_at", "2017-09-17 12:48:19.290436"], ["updated_at", "2017-09-17 12:48:19.290436"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB5"], ["created_at", "2017-09-17 12:48:19.299940"], ["updated_at", "2017-09-17 12:48:19.299940"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB6"], ["created_at", "2017-09-17 12:48:19.308935"], ["updated_at", "2017-09-17 12:48:19.308935"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB7"], ["created_at", "2017-09-17 12:48:19.318436"], ["updated_at", "2017-09-17 12:48:19.318436"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB8"], ["created_at", "2017-09-17 12:48:19.328936"], ["updated_at", "2017-09-17 12:48:19.328936"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB0"], ["created_at", "2017-09-17 12:48:19.348436"], ["updated_at", "2017-09-17 12:48:19.348436"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB1"], ["created_at", "2017-09-17 12:48:19.357935"], ["updated_at", "2017-09-17 12:48:19.357935"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB2"], ["created_at", "2017-09-17 12:48:19.367437"], ["updated_at", "2017-09-17 12:48:19.367437"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 0"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:48:19.398436"], ["updated_at", "2017-09-17 12:48:19.398436"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 1"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:48:19.410435"], ["updated_at", "2017-09-17 12:48:19.410435"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 2"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:48:19.420938"], ["updated_at", "2017-09-17 12:48:19.420938"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 3"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:48:19.433438"], ["updated_at", "2017-09-17 12:48:19.433438"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 4"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:48:19.444436"], ["updated_at", "2017-09-17 12:48:19.444436"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This is the beginning"], ["body", "<div>Think back to when you were a child, did the summers seem to last forever? \n    They certainly seemed longer than they do now, if you&#39;re lucky enough to get a \n    month or six weeks off between school semesters - how much can you do really? The kids \n    though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>\n    \n    <div>&nbsp;</div>\n    \n    <div>Every year is new, every semester is new. New teachers, new students, things that \n    used to be a problem are fixed and things that used to work great need a little adjustment. \n    Great!&nbsp;</div>"], ["created_at", "2017-09-17 12:48:19.716437"], ["updated_at", "2017-09-17 12:48:19.716437"], ["slug", "this-is-the-beginning"], ["status", 1], ["topic_id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/blogs/" for 127.0.0.1 at 2017-09-17 20:48:31 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [1 times] (47.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (99.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (779.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 44410ms (Views: 44321.7ms | ActiveRecord: 4.4ms)
+
+
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (7.4ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (8.5ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kevinsparling@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "kevinsparling@hotmail.com"], ["name", "Kevin Sparling"], ["encrypted_password", "$2a$11$AkBVezESuMs8MwCKJLpNfuj3tsRGXPaGYBAwTr3A4KdfzsbaLCGCq"], ["created_at", "2017-09-17 12:51:45.291750"], ["updated_at", "2017-09-17 12:51:45.291750"], ["roles", "site_admin"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.com"], ["name", "Testy McTesterton"], ["encrypted_password", "$2a$11$ap8L1nDlLYz/g5szrzD3aOiJvqxsdRqu/D7CrHy2o.udGO.kEjeeW"], ["created_at", "2017-09-17 12:51:45.407745"], ["updated_at", "2017-09-17 12:51:45.407745"], ["roles", "user"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB0"], ["created_at", "2017-09-17 12:51:45.433245"], ["updated_at", "2017-09-17 12:51:45.433245"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB1"], ["created_at", "2017-09-17 12:51:45.442745"], ["updated_at", "2017-09-17 12:51:45.442745"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB2"], ["created_at", "2017-09-17 12:51:45.450746"], ["updated_at", "2017-09-17 12:51:45.450746"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB3"], ["created_at", "2017-09-17 12:51:45.459746"], ["updated_at", "2017-09-17 12:51:45.459746"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB4"], ["created_at", "2017-09-17 12:51:45.470246"], ["updated_at", "2017-09-17 12:51:45.470246"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB5"], ["created_at", "2017-09-17 12:51:45.479245"], ["updated_at", "2017-09-17 12:51:45.479245"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB6"], ["created_at", "2017-09-17 12:51:45.488245"], ["updated_at", "2017-09-17 12:51:45.488245"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB7"], ["created_at", "2017-09-17 12:51:45.496245"], ["updated_at", "2017-09-17 12:51:45.496245"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB8"], ["created_at", "2017-09-17 12:51:45.505245"], ["updated_at", "2017-09-17 12:51:45.505245"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB0"], ["created_at", "2017-09-17 12:51:45.522247"], ["updated_at", "2017-09-17 12:51:45.522247"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB1"], ["created_at", "2017-09-17 12:51:45.529746"], ["updated_at", "2017-09-17 12:51:45.529746"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB2"], ["created_at", "2017-09-17 12:51:45.538744"], ["updated_at", "2017-09-17 12:51:45.538744"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 0"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:51:45.565244"], ["updated_at", "2017-09-17 12:51:45.565244"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 1"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:51:45.580245"], ["updated_at", "2017-09-17 12:51:45.580245"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 2"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:51:45.590742"], ["updated_at", "2017-09-17 12:51:45.590742"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 3"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:51:45.604244"], ["updated_at", "2017-09-17 12:51:45.604244"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 4"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 12:51:45.614244"], ["updated_at", "2017-09-17 12:51:45.614244"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This is the beginning"], ["body", "<div>Think back to when you were a child, did the summers seem to last forever? \n    They certainly seemed longer than they do now, if you&#39;re lucky enough to get a \n    month or six weeks off between school semesters - how much can you do really? The kids \n    though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>\n    \n    <div>&nbsp;</div>\n    \n    <div>Every year is new, every semester is new. New teachers, new students, things that \n    used to be a problem are fixed and things that used to work great need a little adjustment. \n    Great!&nbsp;</div>"], ["created_at", "2017-09-01 12:00:00"], ["updated_at", "2017-09-17 12:51:45.729746"], ["slug", "this-is-the-beginning"], ["status", 1], ["topic_id", 1]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-09-17 20:54:08 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (10.0ms)
+  Rendered shared/_application_nav.html.erb (4.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 4671ms (Views: 4566.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (10.0ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kevinsparling@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "kevinsparling@hotmail.com"], ["name", "Kevin Sparling"], ["encrypted_password", "$2a$11$qYj5H32ZpWbhQh2kwsO7jOpesKmuJrdN5EOQ2Pz5U4Hif1VW3NW1."], ["created_at", "2017-09-17 13:07:36.361136"], ["updated_at", "2017-09-17 13:07:36.361136"], ["roles", "site_admin"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.com"], ["name", "Testy McTesterton"], ["encrypted_password", "$2a$11$hGcZY98EOYZf6BV2GxnPtOBqFCVB3DkRYEdmRYfuZmgmXfslJErPe"], ["created_at", "2017-09-17 13:07:36.473138"], ["updated_at", "2017-09-17 13:07:36.473138"], ["roles", "user"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB0"], ["created_at", "2017-09-17 13:07:36.494104"], ["updated_at", "2017-09-17 13:07:36.494104"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB1"], ["created_at", "2017-09-17 13:07:36.504106"], ["updated_at", "2017-09-17 13:07:36.504106"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB2"], ["created_at", "2017-09-17 13:07:36.514106"], ["updated_at", "2017-09-17 13:07:36.514106"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB3"], ["created_at", "2017-09-17 13:07:36.523844"], ["updated_at", "2017-09-17 13:07:36.523844"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB4"], ["created_at", "2017-09-17 13:07:36.534026"], ["updated_at", "2017-09-17 13:07:36.534026"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB5"], ["created_at", "2017-09-17 13:07:36.544026"], ["updated_at", "2017-09-17 13:07:36.544026"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB6"], ["created_at", "2017-09-17 13:07:36.553024"], ["updated_at", "2017-09-17 13:07:36.553024"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB7"], ["created_at", "2017-09-17 13:07:36.564025"], ["updated_at", "2017-09-17 13:07:36.564025"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB8"], ["created_at", "2017-09-17 13:07:36.574027"], ["updated_at", "2017-09-17 13:07:36.574027"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB0"], ["created_at", "2017-09-17 13:07:36.589024"], ["updated_at", "2017-09-17 13:07:36.589024"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB1"], ["created_at", "2017-09-17 13:07:36.597959"], ["updated_at", "2017-09-17 13:07:36.597959"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB2"], ["created_at", "2017-09-17 13:07:36.607725"], ["updated_at", "2017-09-17 13:07:36.607725"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 0"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:07:36.628752"], ["updated_at", "2017-09-17 13:07:36.628752"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 1"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:07:36.640723"], ["updated_at", "2017-09-17 13:07:36.640723"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 2"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:07:36.651755"], ["updated_at", "2017-09-17 13:07:36.651755"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 3"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:07:36.664727"], ["updated_at", "2017-09-17 13:07:36.664727"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 4"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:07:36.675754"], ["updated_at", "2017-09-17 13:07:36.675754"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTopic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This is the beginning"], ["body", "<div>Think back to when you were a child, did the summers seem to last forever? \n    They certainly seemed longer than they do now, if you&#39;re lucky enough to get a \n    month or six weeks off between school semesters - how much can you do really? The kids \n    though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>\n    \n    <div>&nbsp;</div>\n    \n    <div>Every year is new, every semester is new. New teachers, new students, things that \n    used to be a problem are fixed and things that used to work great need a little adjustment. \n    Great!&nbsp;</div>"], ["created_at", "2017-09-01 12:00:00"], ["updated_at", "2017-09-17 13:07:36.777167"], ["slug", "this-is-the-beginning"], ["status", 1], ["topic_id", 1]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "baby-baby-baby-awwwwwwwwwww"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baby, baby, baby AWWWWWWWWWWW"], ["body", "<div>I came to the kindergarten in the spring of 2015, and when I came everything was a \n    big adjustment, China was an adjustment. The classes with the older children were a bit easier,\n    there were 4 different age levels. One class was the baby class, baby class was a problem sometimes.\n    They were just so young, I didn't know how to handle them sometimes because they can't do much\n    in their native language much less their second or third. When I had a good class with them though\n    it was just the best time of the week. Those kids are still at the school, they were KB8, then KB6,\n    then KB4, now KB1!</div>\n\n    <div>&nbsp;</div>\n\n    <div>This class is the class that most often if I just want to sit in with a class it's the one\n    I go for. There are so many children there that I've seen get so much bigger than I just can't help\n    myself but take some special pride in their success. one girl Rosa was in my extra after school class\n    last semester, and she would always wait for me for an extra couple of minutes while I packed up\n    my computer so that we could hold hands when we went down the stairs. I'm not a good enough person to\n    do that, but she is! I don't want to go on and on about Rosa here but she is for sure one of the \n    children that I've always just loved: she's just the best at laughing.</div>\n    "], ["created_at", "2017-09-05 12:00:00"], ["updated_at", "2017-09-17 13:07:36.788234"], ["slug", "baby-baby-baby-awwwwwwwwwww"], ["status", 1], ["topic_id", 1]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 21:08:20 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (62.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (126.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 21:08:52 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (44.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (85.5ms)
+Completed 500 Internal Server Error in 1916ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    13:     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/orkney" type="text/css"/> 
+    14:     <%= javascript_include_tag Ckeditor.cdn_url %>
+    15:     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18: 
+    19:   <body>
+  
+app/views/layouts/blog.html.erb:16:in `_app_views_layouts_blog_html_erb__1816486364_121151160'
+  Rendered shared/_album_nav.html.erb (1.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (60.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 33830ms (Views: 33761.5ms | ActiveRecord: 0.5ms)
+
+
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/tools/ruby24/lib/ruby/gems/2.4.0/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (820.0ms)
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 21:11:45 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (38.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (77.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (4.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 30340ms (Views: 30319.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/1" for 127.0.0.1 at 2017-09-17 21:12:34 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."topic_id" = ? AND "blogs"."status" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["topic_id", 1], ["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (65.5ms)
+  Rendered topics/show.html.erb within layouts/blog (121.5ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (22.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 3480ms (Views: 3382.6ms | ActiveRecord: 2.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (6.5ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (9.0ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (8.0ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (6.0ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (8.5ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "albums"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "albums" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "subtitle" varchar, "main_image" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "position" integer, "body" varchar, "thumb_image" text)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "blogs"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "blogs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "slug" varchar, "status" integer DEFAULT 0, "topic_id" integer)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_blogs_on_slug" ON "blogs" ("slug")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_blogs_on_slug' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_blogs_on_topic_id" ON "blogs" ("topic_id")[0m
+  [1m[35m (8.7ms)[0m  [1m[35mDROP TABLE "ckeditor_assets"[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "ckeditor_assets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data_file_name" varchar NOT NULL, "data_content_type" varchar, "data_file_size" integer, "assetable_id" integer, "assetable_type" varchar(30), "type" varchar(30), "width" integer, "height" integer, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable" ON "ckeditor_assets" ("assetable_type", "assetable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='idx_ckeditor_assetable' AND type='index'
+[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE  INDEX "idx_ckeditor_assetable_type" ON "ckeditor_assets" ("assetable_type", "type", "assetable_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "comments"[0m
+  [1m[35m (9.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "user_id" integer, "blog_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_blog_id" ON "comments" ("blog_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_blog_id' AND type='index'
+[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "friendly_id_slugs"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "friendly_id_slugs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "slug" varchar NOT NULL, "sluggable_id" integer NOT NULL, "sluggable_type" varchar(50), "scope" varchar, "created_at" datetime)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope" ON "friendly_id_slugs" ("slug", "sluggable_type", "scope")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_slug_and_sluggable_type" ON "friendly_id_slugs" ("slug", "sluggable_type")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_id" ON "friendly_id_slugs" ("sluggable_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_sluggable_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope' AND type='index'
+[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_friendly_id_slugs_on_sluggable_type" ON "friendly_id_slugs" ("sluggable_type")[0m
+  [1m[35m (7.8ms)[0m  [1m[35mDROP TABLE "photos"[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "photos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE  INDEX "index_photos_on_album_id" ON "photos" ("album_id")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mDROP TABLE "tags"[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "album_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_album_id" ON "tags" ("album_id")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "topics"[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "badge" text)[0m
+  [1m[35m (6.5ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "name" varchar, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "roles" varchar)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.8ms)[0m  [1m[35mDROP TABLE "wechat_sessions"[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "wechat_sessions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "openid" varchar NOT NULL, "hash_store" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_wechat_sessions_on_openid" ON "wechat_sessions" ("openid")[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kevinsparling@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "kevinsparling@hotmail.com"], ["name", "Kevin Sparling"], ["encrypted_password", "$2a$11$pdto9T5sHkW.LbkQvxTxLupHlXIbZVxGXQYqRujl/txwVJn6D91Ke"], ["created_at", "2017-09-17 13:13:07.351026"], ["updated_at", "2017-09-17 13:13:07.351026"], ["roles", "site_admin"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "encrypted_password", "created_at", "updated_at", "roles") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "test@test.com"], ["name", "Testy McTesterton"], ["encrypted_password", "$2a$11$PksXh3vuuvDz.gqWdhP1lu1UH4742FeIKoCCwptYpTaOqJF9gYiw."], ["created_at", "2017-09-17 13:13:07.466996"], ["updated_at", "2017-09-17 13:13:07.466996"], ["roles", "user"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB0"], ["created_at", "2017-09-17 13:13:07.487015"], ["updated_at", "2017-09-17 13:13:07.487015"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB1"], ["created_at", "2017-09-17 13:13:07.496501"], ["updated_at", "2017-09-17 13:13:07.496501"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB2"], ["created_at", "2017-09-17 13:13:07.505819"], ["updated_at", "2017-09-17 13:13:07.505819"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB3"], ["created_at", "2017-09-17 13:13:07.515318"], ["updated_at", "2017-09-17 13:13:07.515318"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB4"], ["created_at", "2017-09-17 13:13:07.525615"], ["updated_at", "2017-09-17 13:13:07.525615"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB5"], ["created_at", "2017-09-17 13:13:07.535616"], ["updated_at", "2017-09-17 13:13:07.535616"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB6"], ["created_at", "2017-09-17 13:13:07.546118"], ["updated_at", "2017-09-17 13:13:07.546118"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB7"], ["created_at", "2017-09-17 13:13:07.555119"], ["updated_at", "2017-09-17 13:13:07.555119"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "KB8"], ["created_at", "2017-09-17 13:13:07.564118"], ["updated_at", "2017-09-17 13:13:07.564118"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB0"], ["created_at", "2017-09-17 13:13:07.578122"], ["updated_at", "2017-09-17 13:13:07.578122"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB1"], ["created_at", "2017-09-17 13:13:07.587119"], ["updated_at", "2017-09-17 13:13:07.587119"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "KB2"], ["created_at", "2017-09-17 13:13:07.596121"], ["updated_at", "2017-09-17 13:13:07.596121"]]
+  [1m[35m (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 0"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:13:07.619059"], ["updated_at", "2017-09-17 13:13:07.619059"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 1"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:13:07.630028"], ["updated_at", "2017-09-17 13:13:07.630028"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 2"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:13:07.640529"], ["updated_at", "2017-09-17 13:13:07.640529"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 3"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:13:07.653028"], ["updated_at", "2017-09-17 13:13:07.653028"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "albums" ("title", "subtitle", "created_at", "updated_at", "body", "main_image", "thumb_image") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This album is 4"], ["subtitle", "This is the fucking subtitle"], ["created_at", "2017-09-17 13:13:07.663531"], ["updated_at", "2017-09-17 13:13:07.663531"], ["body", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the \n        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled \n        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic \n        typesetting, remaining essentially unchanged."], ["main_image", nil], ["thumb_image", nil]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" ORDER BY "topics"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "this-is-the-beginning"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "This is the beginning"], ["body", "<div>Think back to when you were a child, did the summers seem to last forever? \n    They certainly seemed longer than they do now, if you&#39;re lucky enough to get a \n    month or six weeks off between school semesters - how much can you do really? The kids \n    though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>\n    \n    <div>&nbsp;</div>\n    \n    <div>Every year is new, every semester is new. New teachers, new students, things that \n    used to be a problem are fixed and things that used to work great need a little adjustment. \n    Great!&nbsp;</div>"], ["created_at", "2017-09-01 12:00:00"], ["updated_at", "2017-09-17 13:13:07.763217"], ["slug", "this-is-the-beginning"], ["status", 1], ["topic_id", 1]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mBlog Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = ? LIMIT ?[0m  [["slug", "baby-baby-baby-awwwwwwwwwww"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug", "status", "topic_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Baby, baby, baby AWWWWWWWWWWW"], ["body", "<div>I came to the kindergarten in the spring of 2015, and when I came everything was a \n    big adjustment, China was an adjustment. The classes with the older children were a bit easier,\n    there were 4 different age levels. One class was the baby class, baby class was a problem sometimes.\n    They were just so young, I didn't know how to handle them sometimes because they can't do much\n    in their native language much less their second or third. When I had a good class with them though\n    it was just the best time of the week. Those kids are still at the school, they were KB8, then KB6,\n    then KB4, now KB1!</div>\n\n    <div>&nbsp;</div>\n\n    <div>This class is the class that most often if I just want to sit in with a class it's the one\n    I go for. There are so many children there that I've seen get so much bigger than I just can't help\n    myself but take some special pride in their success. one girl Rosa was in my extra after school class\n    last semester, and she would always wait for me for an extra couple of minutes while I packed up\n    my computer so that we could hold hands when we went down the stairs. I'm not a good enough person to\n    do that, but she is! I don't want to go on and on about Rosa here but she is for sure one of the \n    children that I've always just loved: she's just the best at laughing.</div>\n    "], ["created_at", "2017-09-05 12:00:00"], ["updated_at", "2017-09-17 13:13:07.773217"], ["slug", "baby-baby-baby-awwwwwwwwwww"], ["status", 1], ["topic_id", 2]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/topics/1" for 127.0.0.1 at 2017-09-17 21:15:20 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTopic Load (0.5ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."topic_id" = ? AND "blogs"."status" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["topic_id", 1], ["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (1.0ms)
+  Rendered collection of blogs/_blog.html.erb [1 times] (51.5ms)
+  Rendered topics/show.html.erb within layouts/blog (111.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (20.5ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 33366ms (Views: 33267.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/topics/2" for 127.0.0.1 at 2017-09-17 21:16:45 +0800
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTopic Load (0.0ms)[0m  [1m[34mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering topics/show.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."topic_id" = ? AND "blogs"."status" = ? ORDER BY created_at DESC LIMIT ? OFFSET ?[0m  [["topic_id", 2], ["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered collection of blogs/_blog.html.erb [1 times] (19.0ms)
+  Rendered topics/show.html.erb within layouts/blog (58.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (3.5ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 29928ms (Views: 29906.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 21:18:52 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (43.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (88.0ms)
+  Rendered shared/_album_nav.html.erb (0.0ms)
+  Rendered shared/_blog_masthead.html.erb (1.0ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (2.8ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 29935ms (Views: 29916.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-09-17 21:26:58 +0800
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.5ms)
+  Rendered albums/index.html.erb within layouts/albums (34.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 1684ms (Views: 1653.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/albums" for 127.0.0.1 at 2017-09-17 21:27:00 +0800
+Processing by AlbumsController#index as HTML
+  Rendering albums/index.html.erb within layouts/albums
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT "albums".* FROM "albums" ORDER BY position ASC[0m
+  Rendered collection of albums/_album_item.html.erb [5 times] (1.0ms)
+  Rendered albums/index.html.erb within layouts/albums (24.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 891ms (Views: 871.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/albums/1" for 127.0.0.1 at 2017-09-17 21:27:04 +0800
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAlbum Load (0.5ms)[0m  [1m[34mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering albums/show.html.erb within layouts/albums
+  [1m[36mTag Load (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."album_id" = ?[0m  [["album_id", 1]]
+  Rendered albums/show.html.erb within layouts/albums (9.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_album_masthead.html.erb (0.5ms)
+  Rendered shared/_album_footer.html.erb (0.5ms)
+Completed 200 OK in 844ms (Views: 816.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-09-17 21:27:10 +0800
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (4.0ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 870ms (Views: 846.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about-us" for 127.0.0.1 at 2017-09-17 21:27:11 +0800
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (2.5ms)
+  Rendered shared/_application_nav.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 940ms (Views: 922.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact" for 127.0.0.1 at 2017-09-17 21:27:16 +0800
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (17.0ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.0ms)
+Completed 200 OK in 835ms (Views: 814.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-17 21:27:18 +0800
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered shared/_application_nav.html.erb (0.5ms)
+  Rendered shared/_footer.html.erb (0.5ms)
+Completed 200 OK in 832ms (Views: 815.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 21:27:20 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.0ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (35.0ms)
+  Rendered blogs/index.html.erb within layouts/blog (73.0ms)
+  Rendered shared/_album_nav.html.erb (0.5ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.5ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (4.0ms)
+  Rendered shared/_blog_footer.html.erb (0.0ms)
+Completed 200 OK in 30138ms (Views: 30117.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2017-09-17 21:27:58 +0800
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."status" = ? LIMIT ? OFFSET ?[0m  [["status", 1], ["LIMIT", 5], ["OFFSET", 0]]
+  Rendered blogs/_admin_actions.html.erb (0.5ms)
+  Rendered blogs/_admin_actions.html.erb (0.0ms)
+  Rendered collection of blogs/_blog.html.erb [2 times] (41.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (88.5ms)
+  Rendered shared/_album_nav.html.erb (1.0ms)
+  Rendered shared/_blog_masthead.html.erb (0.5ms)
+  [1m[35mSQL (0.0ms)[0m  [1m[34mSELECT "topics"."id" AS t0_r0, "topics"."title" AS t0_r1, "topics"."created_at" AS t0_r2, "topics"."updated_at" AS t0_r3, "topics"."badge" AS t0_r4, "blogs"."id" AS t1_r0, "blogs"."title" AS t1_r1, "blogs"."body" AS t1_r2, "blogs"."created_at" AS t1_r3, "blogs"."updated_at" AS t1_r4, "blogs"."slug" AS t1_r5, "blogs"."status" AS t1_r6, "blogs"."topic_id" AS t1_r7 FROM "topics" LEFT OUTER JOIN "blogs" ON "blogs"."topic_id" = "topics"."id" WHERE ("blogs"."id" IS NOT NULL)[0m
+  Rendered shared/_blog_sidebar.html.erb (4.0ms)
+  Rendered shared/_blog_footer.html.erb (0.5ms)
+Completed 200 OK in 1044ms (Views: 1019.2ms | ActiveRecord: 0.5ms)
+
+

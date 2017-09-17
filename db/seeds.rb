@@ -22,14 +22,14 @@ User.create!(
 )
 puts "Test user created"
 
-3.times do |tag|
+9.times do |tag|
     Tag.create!(
         name: "KB#{tag}"
     )
 end
 puts "3 tags created"
 
-3.times do |topic|
+9.times do |topic|
     Topic.create!(
         title: "KB#{topic}"
     )
@@ -50,17 +50,46 @@ puts "3 topics created"
 end
 puts "5 albums created"
 
-10.times do |blog|
-    Blog.create!(
-        title: "My Blog Post #{blog}",
-        body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
-        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-        it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic 
-        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
-        versions of Lorem Ipsum.",
-        topic_id: Topic.last.id,
-        status: 1
-    )
-end
-puts "10 blog posts created"
+Blog.create!(
+    title: "This is the beginning",
+    body: "<div>Think back to when you were a child, did the summers seem to last forever? 
+    They certainly seemed longer than they do now, if you&#39;re lucky enough to get a 
+    month or six weeks off between school semesters - how much can you do really? The kids 
+    though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>
+    
+    <div>&nbsp;</div>
+    
+    <div>Every year is new, every semester is new. New teachers, new students, things that 
+    used to be a problem are fixed and things that used to work great need a little adjustment. 
+    Great!&nbsp;</div>",
+    topic_id: Topic.first.id,
+    status: 1,
+    created_at: "2017-09-01 12:00:00"
+)
+
+Blog.create!(
+    title: "Baby, baby, baby AWWWWWWWWWWW",
+    body: "<div>I came to the kindergarten in the spring of 2015, and when I came everything was a 
+    big adjustment, China was an adjustment. The classes with the older children were a bit easier,
+    there were 4 different age levels. One class was the baby class, baby class was a problem sometimes.
+    They were just so young, I didn't know how to handle them sometimes because they can't do much
+    in their native language much less their second or third. When I had a good class with them though
+    it was just the best time of the week. Those kids are still at the school, they were KB8, then KB6,
+    then KB4, now KB1!</div>
+
+    <div>&nbsp;</div>
+
+    <div>This class is the class that most often if I just want to sit in with a class it's the one
+    I go for. There are so many children there that I've seen get so much bigger than I just can't help
+    myself but take some special pride in their success. one girl Rosa was in my extra after school class
+    last semester, and she would always wait for me for an extra couple of minutes while I packed up
+    my computer so that we could hold hands when we went down the stairs. I'm not a good enough person to
+    do that, but she is! I don't want to go on and on about Rosa here but she is for sure one of the 
+    children that I've always just loved: she's just the best at laughing.</div>
+    ",
+    topic_id: 2,
+    status: 1,
+    created_at: "2017-09-05 12:00:00"
+)
+
+puts "original blog posts created"
