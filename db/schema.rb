@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830190026) do
+ActiveRecord::Schema.define(version: 20170917001405) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
@@ -35,6 +35,21 @@ ActiveRecord::Schema.define(version: 20170830190026) do
     t.index ["topic_id"], name: "index_blogs_on_topic_id"
   end
 
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_file_name",               null: false
+    t.string   "data_content_type"
+    t.integer  "data_file_size"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable"
+    t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
@@ -55,6 +70,14 @@ ActiveRecord::Schema.define(version: 20170830190026) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "album_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["album_id"], name: "index_photos_on_album_id"
   end
 
   create_table "tags", force: :cascade do |t|

@@ -4,7 +4,7 @@
     
     <%= render partial: 'blogs/admin_actions', locals: { blog: blog } %>
 
-    <p>
-        <%= blog.body %>
-    </p>
+    <div class="blog-body">
+        <%= raw(blog.body) %>
+    </div>
 </div>

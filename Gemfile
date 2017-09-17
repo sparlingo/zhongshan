@@ -84,3 +84,8 @@ gem 'gritter', '~> 1.2'
 
 # for markdown
 gem 'redcarpet', '~> 3.4'
+
+# ckeditor with paperclip
+gem 'ckeditor', '4.2.4'
+gem 'paperclip'
+gem 'slim-rails', '3.1.1'

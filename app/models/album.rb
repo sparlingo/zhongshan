@@ -9,6 +9,8 @@ class Album < ApplicationRecord
     mount_uploader :main_image, AlbumUploader
     mount_uploader :thumb_image, AlbumUploader
 
+    has_many :photos
+
     def self.by_position
         order("position ASC")
     end

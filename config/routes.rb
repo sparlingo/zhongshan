@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   end
 
   mount ActionCable.server => '/cable'
+  mount Ckeditor::Engine => '/ckeditor'
   
   get 'about-us', to: 'pages#about'
   get 'contact', to: 'pages#contact'
