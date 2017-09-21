@@ -55,13 +55,18 @@ Blog.create!(
     body: "<div>Think back to when you were a child, did the summers seem to last forever? 
     They certainly seemed longer than they do now, if you&#39;re lucky enough to get a 
     month or six weeks off between school semesters - how much can you do really? The kids 
-    though, they actually get bored. Bored. I don&#39;t even remember what that is.</div>
+    though, they actually get bored. Bored! I don&#39;t even remember what that is.</div>
     
     <div>&nbsp;</div>
     
     <div>Every year is new, every semester is new. New teachers, new students, things that 
     used to be a problem are fixed and things that used to work great need a little adjustment. 
-    Great!&nbsp;</div>",
+    Great!&nbsp;</div>
+    
+    <div>I'll be pouring my little hear out here at least once a week, I suppose the target audience is 
+    foreigners who are thinking of coming to China to teach, at our school or otherwise. It's been said that 
+    people who come to China for a week can write a book about their experiences, people who come for three months
+    can only write an article, and after a year they can't even fill a postcard. I hope I can break through the bewilderment.",
     topic_id: Topic.first.id,
     status: 1,
     created_at: "2017-09-01 12:00:00"
