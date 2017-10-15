@@ -97,4 +97,19 @@ Blog.create!(
     created_at: "2017-09-05 12:00:00"
 )
 
+Blog.create!(
+    title: "Not-e, not-e, not-e",
+    body: '<div>"if you can\'t handle me at my worst, then you sure as hell don\'t deserve me at my best.” 
+    ― Marilyn Monroe</div>
+    <div>Kindergarten classes are a lot like that class American bomshell, sometimes they\'re bad ad that makes
+    the good times so much better. I think each class that I\'ve had here in China at some point or another has been either
+    the best behaved or the worst behaved. Right now there are 7 classes, I teach each 2 or 3 times a week and the ebb and flow
+    through a semester causes each to be a pain or a pleasure. I\'m not in the class to see what drives a class from "oh so good"
+    to "oh so naughty", but there seems to be a rhythm to it.</div>
+    ',
+    topic_id: 3,
+    status: 1,
+    created_at: "2017-09-12 12:00:00"
+)
+
 puts "original blog posts created"
